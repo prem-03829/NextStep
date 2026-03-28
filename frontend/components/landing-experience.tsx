@@ -32,8 +32,7 @@ const sections: StorySection[] = [
     id: "discover",
     eyebrow: "Self Discovery",
     title: "Start with who you are, not what everyone else is doing",
-    body:
-      "NextStep translates your strengths, interests, and personality into a direction you can trust. The goal is not just picking a course. It is choosing a future that feels like your own.",
+    body: "NextStep translates your strengths, interests, and personality into a direction you can trust. The goal is not just picking a course. It is choosing a future that feels like your own.",
     marker: "Know Yourself",
     align: "right",
     insight: "Turn confusion into a grounded starting point.",
@@ -43,8 +42,7 @@ const sections: StorySection[] = [
     id: "skills",
     eyebrow: "Skill Gap",
     title: "See the distance between where you are and where you want to go",
-    body:
-      "Instead of vague advice, you get a practical view of readiness. We show what you already have, what is missing, and what to do next so progress feels possible.",
+    body: "Instead of vague advice, you get a practical view of readiness. We show what you already have, what is missing, and what to do next so progress feels possible.",
     marker: "Close The Gap",
     align: "left",
     insight: "Clear readiness beats generic motivation.",
@@ -58,19 +56,21 @@ const sections: StorySection[] = [
     id: "paths",
     eyebrow: "Career Match",
     title: "Explore careers that fit your thinking style and real potential",
-    body:
-      "The best path is not always the loudest one. NextStep highlights career directions that connect with how you solve problems, what energizes you, and where you can grow with confidence.",
+    body: "The best path is not always the loudest one. NextStep highlights career directions that connect with how you solve problems, what energizes you, and where you can grow with confidence.",
     marker: "Find The Fit",
     align: "right",
     insight: "A better match creates momentum you can feel.",
-    bullets: ["Personalized career clusters", "Reasoned recommendations", "Less pressure, more fit"],
+    bullets: [
+      "Personalized career clusters",
+      "Reasoned recommendations",
+      "Less pressure, more fit",
+    ],
   },
   {
     id: "destination",
     eyebrow: "College Decisions",
     title: "Move from hopeful guessing to confident college choices",
-    body:
-      "Compare colleges, estimate your chances, and understand outcomes in one place. That means less panic, fewer random choices, and more confidence when it is time to decide.",
+    body: "Compare colleges, estimate your chances, and understand outcomes in one place. That means less panic, fewer random choices, and more confidence when it is time to decide.",
     marker: "Choose Smart",
     align: "left",
     insight: "The final decision should feel informed, not risky.",
@@ -129,6 +129,38 @@ export function LandingExperience() {
   const [activeSection, setActiveSection] = useState(0);
   const sectionRefs = useRef<Array<HTMLElement | null>>([]);
   const heroRef = useRef<HTMLDivElement>(null);
+  const blobBlueRef = useRef<HTMLDivElement>(null);
+  const blobWarmRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (reducedMotion) return;
+
+    const animations = [
+      {
+        targets: blobBlueRef.current,
+        translateX: [-15, 15],
+        translateY: [-10, 20],
+        scale: [1, 1.06],
+        duration: 8000,
+      },
+      {
+        targets: blobWarmRef.current,
+        translateX: [10, -20],
+        translateY: [15, -15],
+        scale: [1, 1.08],
+        duration: 9500,
+      },
+    ].map((config) =>
+      anime({
+        ...config,
+        easing: "easeInOutSine",
+        direction: "alternate",
+        loop: true,
+      }),
+    );
+
+    return () => animations.forEach((a) => a.pause());
+  }, [reducedMotion]);
 
   useEffect(() => {
     if (reducedMotion) return;
@@ -139,7 +171,7 @@ export function LandingExperience() {
       const scrollY = window.scrollY;
       const range = 400;
       const p = Math.min(Math.max(scrollY / range, 0), 1);
-      
+
       // Map scroll progress to scale: 1 -> 1.3 and opacity: 1 -> 0
       const scale = 1 + p * 0.3;
       const opacity = 1 - p;
@@ -183,14 +215,18 @@ export function LandingExperience() {
 
   useEffect(() => {
     if (reducedMotion) {
-      document.querySelectorAll<HTMLElement>("[data-reveal='true']").forEach((node) => {
-        node.style.opacity = "1";
-        node.style.transform = "translate3d(0, 0, 0)";
-      });
+      document
+        .querySelectorAll<HTMLElement>("[data-reveal='true']")
+        .forEach((node) => {
+          node.style.opacity = "1";
+          node.style.transform = "translate3d(0, 0, 0)";
+        });
       return;
     }
 
-    const targets = document.querySelectorAll<HTMLElement>("[data-reveal='true']");
+    const targets = document.querySelectorAll<HTMLElement>(
+      "[data-reveal='true']",
+    );
 
     targets.forEach((node) => {
       node.style.opacity = "0";
@@ -265,8 +301,14 @@ export function LandingExperience() {
 
       <div className="relative z-10">
         <section className="relative flex min-h-screen items-center px-6 pb-10 pt-28 md:px-10">
-          <div className="hero-radial hero-radial-blue left-[4%] top-[14%] h-72 w-72" />
-          <div className="hero-radial hero-radial-warm right-[8%] top-[18%] h-80 w-80" />
+          <div
+            ref={blobBlueRef}
+            className="hero-radial hero-radial-blue left-[4%] top-[14%] h-72 w-72"
+          />
+          <div
+            ref={blobWarmRef}
+            className="hero-radial hero-radial-warm right-[8%] top-[18%] h-80 w-80"
+          />
 
           <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center text-center">
             <div ref={heroRef} data-reveal="true" className="space-y-6">
@@ -278,7 +320,10 @@ export function LandingExperience() {
               </p>
             </div>
 
-            <div data-reveal="true" className="mt-16 flex flex-col items-center gap-3 text-slate-400">
+            <div
+              data-reveal="true"
+              className="mt-16 flex flex-col items-center gap-3 text-slate-400"
+            >
               <span className="text-xs uppercase tracking-[0.32em]">
                 Scroll for self discovery, career match, and college clarity
               </span>
@@ -317,7 +362,9 @@ export function LandingExperience() {
                     <h2 className="mt-3 font-display text-3xl text-white">
                       {item.value}
                     </h2>
-                    <p className="mt-2 text-sm leading-6 text-slate-400">{item.note}</p>
+                    <p className="mt-2 text-sm leading-6 text-slate-400">
+                      {item.note}
+                    </p>
                   </article>
                 ))}
               </div>
@@ -356,8 +403,16 @@ export function LandingExperience() {
                     <div className="mt-6 space-y-4">
                       {[
                         { label: "Career fit", value: "92%", width: "92%" },
-                        { label: "Confidence level", value: "High", width: "82%" },
-                        { label: "Action readiness", value: "Weekly path", width: "76%" },
+                        {
+                          label: "Confidence level",
+                          value: "High",
+                          width: "82%",
+                        },
+                        {
+                          label: "Action readiness",
+                          value: "Weekly path",
+                          width: "76%",
+                        },
                       ].map((item) => (
                         <div key={item.label} className="space-y-2">
                           <div className="flex items-center justify-between text-sm text-slate-300">
@@ -395,16 +450,18 @@ export function LandingExperience() {
                         Core outcomes
                       </p>
                       <div className="mt-4 flex flex-wrap gap-2">
-                        {["Self Discovery", "Career Match", "College Choices"].map(
-                          (item) => (
-                            <span
-                              key={item}
-                              className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs uppercase tracking-[0.16em] text-slate-300"
-                            >
-                              {item}
-                            </span>
-                          ),
-                        )}
+                        {[
+                          "Self Discovery",
+                          "Career Match",
+                          "College Choices",
+                        ].map((item) => (
+                          <span
+                            key={item}
+                            className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs uppercase tracking-[0.16em] text-slate-300"
+                          >
+                            {item}
+                          </span>
+                        ))}
                       </div>
                     </div>
                   </div>
@@ -468,7 +525,9 @@ export function LandingExperience() {
                     <div className="mx-auto grid w-full md:grid-cols-2">
                       <div
                         className={
-                          section.align === "left" ? "md:col-start-1" : "md:col-start-2"
+                          section.align === "left"
+                            ? "md:col-start-1"
+                            : "md:col-start-2"
                         }
                       >
                         <div
@@ -498,7 +557,9 @@ export function LandingExperience() {
                                   className="rounded-[1.5rem] border border-white/10 bg-white/5 px-4 py-4"
                                 >
                                   <div className="flex items-center justify-between">
-                                    <p className="text-slate-300">{metric.label}</p>
+                                    <p className="text-slate-300">
+                                      {metric.label}
+                                    </p>
                                     <p className="font-display text-xl text-white">
                                       {metric.value}
                                     </p>
@@ -572,11 +633,15 @@ export function LandingExperience() {
                 Your future deserves better than guesswork
               </h2>
               <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-300">
-                Move with clarity, see what fits, and make decisions with much more
-                confidence than a spreadsheet or random advice can give you.
+                Move with clarity, see what fits, and make decisions with much
+                more confidence than a spreadsheet or random advice can give
+                you.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
-                <Link href="/dashboard" className="orb-button rounded-full p-[1px]">
+                <Link
+                  href="/dashboard"
+                  className="orb-button rounded-full p-[1px]"
+                >
                   <span className="flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium">
                     Enter NextStep
                     <ArrowRight className="h-4 w-4" />
