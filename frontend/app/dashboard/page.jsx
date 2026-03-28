@@ -1,12 +1,15 @@
+import OnboardingSimulation from "@/components/dashboard/onboarding-simulation";
 import Link from "next/link";
 import {
   ArrowRight,
   BarChart3,
+  Boxes,
   Compass,
-  Orbit,
   Layers3,
+  Laptop2,
   MapPinned,
   Milestone,
+  Orbit,
   SearchCheck,
   Sparkles,
   Target,
@@ -28,6 +31,14 @@ const collegeTools = [
       "Get likely college options based on your exam score, preferred course, category, and city preference.",
     href: "/dashboard/predictor",
     icon: Target,
+  },
+  {
+    title: "Onboarding Simulation",
+    badge: "Interactive scene",
+    description:
+      "Walk through a themed office simulation inside the dashboard and complete guided onboarding checkpoints.",
+    href: "/dashboard/simulation",
+    icon: Laptop2,
   },
   {
     title: "Compare College",
@@ -56,8 +67,8 @@ const quickStats = [
   },
   {
     label: "Decision Modes",
-    value: "3",
-    note: "Search, predict, compare",
+    value: "4",
+    note: "Search, predict, compare, simulate",
   },
   {
     label: "Experience",
@@ -87,6 +98,10 @@ const journeyMoments = [
 export default function DashboardPage() {
   return (
     <div className="space-y-8">
+      <section>
+        <OnboardingSimulation />
+      </section>
+
       <section className="glass-panel relative overflow-hidden rounded-[2.5rem] p-8 shadow-soft md:p-10">
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute left-[-6rem] top-[-5rem] h-56 w-56 rounded-full bg-sky-300/10 blur-3xl" />
@@ -112,9 +127,9 @@ export default function DashboardPage() {
                 <span className="text-gradient"> more clarity, less noise.</span>
               </h2>
               <p className="max-w-2xl text-base leading-8 text-slate-300 md:text-lg">
-                Search with detailed filters, predict likely matches, and compare
-                shortlisted colleges inside one richer workspace designed to feel
-                closer to the landing experience.
+                Search with detailed filters, predict likely matches, compare
+                shortlisted colleges, and now explore a guided simulation inside
+                one richer workspace designed to feel closer to the landing experience.
               </p>
             </div>
 
@@ -129,10 +144,10 @@ export default function DashboardPage() {
                 </span>
               </Link>
               <Link
-                href="/dashboard/compare"
+                href="/dashboard/simulation"
                 className="glass-panel rounded-full px-6 py-3 text-sm text-slate-200"
               >
-                Compare Finalists
+                Open Simulation
               </Link>
             </div>
 
@@ -253,12 +268,66 @@ export default function DashboardPage() {
         </div>
       </section>
 
+      <section className="grid gap-4 xl:grid-cols-[1.15fr_0.85fr]">
+        <article className="dashboard-glow relative overflow-hidden rounded-[2rem] border border-white/10 p-6 shadow-soft md:p-7">
+          <div className="pointer-events-none absolute inset-0">
+            <div className="absolute left-[-3rem] top-[-3rem] h-40 w-40 rounded-full bg-sky-300/12 blur-3xl" />
+            <div className="absolute right-[-2rem] bottom-[-2rem] h-36 w-36 rounded-full bg-orange-200/10 blur-3xl" />
+          </div>
+          <div className="relative z-10">
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.22em] text-sky-200">
+              <Boxes className="h-4 w-4" />
+              New dashboard section
+            </div>
+            <h2 className="mt-5 max-w-2xl font-display text-4xl leading-tight text-white">
+              Explore the onboarding simulation in the same visual language as the landing and dashboard.
+            </h2>
+            <p className="mt-4 max-w-2xl text-base leading-8 text-slate-300">
+              The simulation now sits inside the dashboard, with glass panels,
+              moody gradients, and the same sky-to-warm accent palette used
+              across the original frontend.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Link
+                href="/dashboard/simulation"
+                className="orb-button rounded-full p-[1px] shadow-soft"
+              >
+                <span className="flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium">
+                  Open Simulation
+                  <ArrowRight className="h-4 w-4" />
+                </span>
+              </Link>
+            </div>
+          </div>
+        </article>
+
+        <article className="glass-panel rounded-[2rem] p-6 shadow-soft">
+          <p className="text-sm uppercase tracking-[0.26em] text-sky-200/80">
+            Simulation Highlights
+          </p>
+          <div className="mt-5 space-y-3">
+            {[
+              "Dedicated dashboard route for the full interactive scene",
+              "Theme adjusted to match the existing dark glass frontend",
+              "Task checklist and NPC chat kept inside the dashboard shell",
+            ].map((item) => (
+              <div
+                key={item}
+                className="rounded-[1.5rem] border border-white/10 bg-white/5 px-4 py-4 text-sm leading-7 text-slate-300"
+              >
+                {item}
+              </div>
+            ))}
+          </div>
+        </article>
+      </section>
+
       <section className="grid gap-4 xl:grid-cols-[1.35fr_0.65fr]">
         <div className="glass-panel rounded-[2rem] p-6 shadow-soft">
           <p className="text-sm uppercase tracking-[0.26em] text-sky-200/80">
             College Discovery Tools
           </p>
-          <div className="mt-6 grid gap-4 md:grid-cols-3">
+          <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
             {collegeTools.map((tool) => {
               const Icon = tool.icon;
 
@@ -302,14 +371,14 @@ export default function DashboardPage() {
           <div className="mt-6 rounded-[1.5rem] border border-white/10 bg-[linear-gradient(180deg,rgba(10,14,29,0.88),rgba(16,20,37,0.56))] p-5">
             <div className="flex items-center justify-between text-sm text-slate-300">
               <span>Active college tools</span>
-              <span>3</span>
+              <span>4</span>
             </div>
             <div className="mt-4 h-3 overflow-hidden rounded-full bg-white/10">
               <div className="h-full w-full rounded-full bg-gradient-to-r from-sky-300 via-cyan-200 to-orange-200" />
             </div>
             <p className="mt-4 text-sm leading-6 text-slate-400">
               Search colleges with deeper filters, predict realistic options,
-              and compare your final shortlist in one flow.
+              compare your final shortlist, and explore a simulation in one flow.
             </p>
           </div>
 
@@ -323,7 +392,7 @@ export default function DashboardPage() {
                   Best Next Step
                 </p>
                 <p className="text-sm text-slate-200">
-                  Start with Smart Search, then narrow down with Compare.
+                  Start with Smart Search, then explore the simulation for a richer product moment.
                 </p>
               </div>
             </div>
@@ -337,16 +406,10 @@ export default function DashboardPage() {
               View Colleges
             </Link>
             <Link
-              href="/dashboard/predictor"
+              href="/dashboard/simulation"
               className="rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm text-slate-200 transition hover:bg-white/10"
             >
-              Use Predictor
-            </Link>
-            <Link
-              href="/dashboard/compare"
-              className="rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm text-slate-200 transition hover:bg-white/10"
-            >
-              Compare Colleges
+              Open Simulation
             </Link>
           </div>
         </div>
@@ -371,6 +434,7 @@ export default function DashboardPage() {
           ))}
         </div>
       </section>
+
     </div>
   );
 }

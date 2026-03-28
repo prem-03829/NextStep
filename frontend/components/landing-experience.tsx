@@ -84,12 +84,6 @@ const heroStats = [
   { label: "To", value: "Momentum", note: "A path you can act on" },
 ];
 
-const floatingSignals = [
-  { label: "Career Fit", value: "92%", position: "top-6 right-6" },
-  { label: "Skill Readiness", value: "Mapped", position: "top-28 -left-5" },
-  { label: "Next Moves", value: "Weekly", position: "bottom-10 right-10" },
-];
-
 function useReducedMotion() {
   const [reducedMotion, setReducedMotion] = useState(false);
 
@@ -165,29 +159,46 @@ export function LandingExperience() {
       return;
     }
 
-    const targets = document.querySelectorAll("[data-reveal='true']");
+    const targets = document.querySelectorAll<HTMLElement>("[data-reveal='true']");
 
-    anime({
-      targets,
-      opacity: [0, 1],
-      translateY: [42, 0],
-      scale: [0.98, 1],
-      delay: anime.stagger(90),
-      duration: 1100,
-      easing: "easeOutExpo",
+    targets.forEach((node) => {
+      node.style.opacity = "0";
+      node.style.transform = "translate3d(0, 42px, 0) scale(0.98)";
     });
 
-    anime({
-      targets: "[data-float='true']",
-      translateY: [
-        { value: -10, duration: 2200 },
-        { value: 0, duration: 2200 },
-      ],
-      easing: "easeInOutSine",
-      loop: true,
-      direction: "alternate",
-      delay: anime.stagger(260),
-    });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            return;
+          }
+
+          const target = entry.target as HTMLElement;
+          if (target.dataset.revealed === "true") {
+            observer.unobserve(target);
+            return;
+          }
+
+          target.dataset.revealed = "true";
+
+          anime({
+            targets: target,
+            opacity: [0, 1],
+            translateY: [42, 0],
+            scale: [0.98, 1],
+            duration: 1050,
+            easing: "easeOutExpo",
+          });
+
+          observer.unobserve(target);
+        });
+      },
+      { threshold: 0.18, rootMargin: "0px 0px -8% 0px" },
+    );
+
+    targets.forEach((node) => observer.observe(node));
+
+    return () => observer.disconnect();
   }, [reducedMotion]);
 
   return (
@@ -226,52 +237,44 @@ export function LandingExperience() {
           <div className="hero-radial hero-radial-blue left-[4%] top-[14%] h-72 w-72" />
           <div className="hero-radial hero-radial-warm right-[8%] top-[18%] h-80 w-80" />
 
-          <div className="mx-auto grid w-full max-w-7xl gap-12 lg:grid-cols-[1.08fr_0.92fr]">
-            <div className="max-w-3xl space-y-8">
-              <div
-                data-reveal="true"
-                className="glass-panel inline-flex items-center gap-3 rounded-full px-4 py-2 text-sm text-slate-300 shadow-soft"
-              >
+          <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center text-center">
+            <div data-reveal="true" className="space-y-6">
+              <h1 className="font-display text-6xl leading-none md:text-8xl xl:text-[8rem]">
+                <span className="shiny-text">NextStep</span>
+              </h1>
+              <p className="mx-auto max-w-2xl text-lg leading-8 text-slate-300 md:text-2xl">
+                "Clarity for the path ahead."
+              </p>
+            </div>
+
+            <div data-reveal="true" className="mt-16 flex flex-col items-center gap-3 text-slate-400">
+              <span className="text-xs uppercase tracking-[0.32em]">
+                Scroll for self discovery, career match, and college clarity
+              </span>
+              <div className="h-12 w-[1px] bg-gradient-to-b from-sky-200/60 to-transparent" />
+            </div>
+          </div>
+        </section>
+
+        <section className="relative px-6 pb-8 md:px-10">
+          <div className="mx-auto grid w-full max-w-7xl gap-6 lg:grid-cols-[1.08fr_0.92fr]">
+            <div data-reveal="true" className="space-y-6">
+              <div className="glass-panel inline-flex items-center gap-3 rounded-full px-4 py-2 text-sm text-slate-300 shadow-soft">
                 <Sparkles className="h-4 w-4 text-sky-200" />
                 Built for students who want clarity, not noise
               </div>
 
-              <div data-reveal="true" className="space-y-6">
-                <p className="section-kicker font-display text-sm uppercase text-slate-400">
-                  Guidance should feel calm, cinematic, and useful
-                </p>
-                <h1 className="max-w-4xl font-display text-5xl leading-[0.96] md:text-7xl xl:text-[5.8rem]">
-                  Find the future that
-                  <span className="text-gradient"> actually fits you.</span>
-                </h1>
-                <p className="max-w-2xl text-lg leading-8 text-slate-300 md:text-xl">
-                  NextStep combines self-discovery, career matching, skill-gap clarity,
-                  and college decisions into one guided experience that feels decisive.
+              <div className="space-y-4">
+                <h2 className="max-w-3xl font-display text-4xl leading-tight text-white md:text-5xl">
+                  Guidance that feels calm, useful, and easy to trust.
+                </h2>
+                <p className="max-w-2xl text-base leading-8 text-slate-300 md:text-lg">
+                  NextStep brings together self-discovery, career fit, skill-gap
+                  clarity, and college decisions into one guided experience.
                 </p>
               </div>
 
-              <div data-reveal="true" className="flex flex-wrap items-center gap-4">
-                <Link
-                  href="/dashboard"
-                  className="orb-button rounded-full p-[1px] shadow-soft"
-                >
-                  <span className="flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium">
-                    Start Your Journey
-                    <ArrowRight className="h-4 w-4" />
-                  </span>
-                </Link>
-                <Link
-                  href="/dashboard"
-                  className="glass-panel rounded-full px-5 py-3 text-sm text-slate-300"
-                >
-                  Explore the dashboard
-                </Link>
-              </div>
-
-              <div
-                data-reveal="true"
-                className="grid gap-4 pt-4 sm:grid-cols-3"
-              >
+              <div className="grid gap-4 pt-2 sm:grid-cols-3">
                 {heroStats.map((item) => (
                   <article
                     key={item.label}
@@ -289,24 +292,8 @@ export function LandingExperience() {
               </div>
             </div>
 
-            <div className="relative flex items-center justify-end">
-              {floatingSignals.map((signal) => (
-                <div
-                  key={signal.label}
-                  data-float="true"
-                  className={`floating-pill glass-panel absolute ${signal.position} hidden rounded-2xl px-4 py-3 text-sm shadow-soft md:block`}
-                >
-                  <p className="text-xs uppercase tracking-[0.18em] text-slate-500">
-                    {signal.label}
-                  </p>
-                  <p className="mt-1 font-display text-2xl text-white">{signal.value}</p>
-                </div>
-              ))}
-
-              <div
-                data-reveal="true"
-                className="spotlight-card dashboard-glow glass-panel relative w-full max-w-xl overflow-hidden rounded-[2rem] p-6 shadow-soft md:p-7"
-              >
+            <div data-reveal="true" className="relative">
+              <div className="spotlight-card dashboard-glow glass-panel relative w-full overflow-hidden rounded-[2rem] p-6 shadow-soft md:p-7">
                 <div className="mb-6 flex items-start justify-between gap-4">
                   <div>
                     <p className="text-sm uppercase tracking-[0.22em] text-slate-500">
@@ -321,7 +308,7 @@ export function LandingExperience() {
                   </div>
                 </div>
 
-                <div className="grid gap-4 md:grid-cols-[1.2fr_0.8fr]">
+                <div className="grid gap-4 lg:grid-cols-[1.15fr_0.85fr]">
                   <div className="rounded-[1.75rem] border border-white/10 bg-white/[0.04] p-5">
                     <div className="flex items-center justify-between">
                       <div>
@@ -369,9 +356,6 @@ export function LandingExperience() {
                         <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
                           Recommendations with visible reasoning
                         </div>
-                        <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
-                          A calmer path from doubt to direction
-                        </div>
                       </div>
                     </div>
 
@@ -380,7 +364,7 @@ export function LandingExperience() {
                         Core outcomes
                       </p>
                       <div className="mt-4 flex flex-wrap gap-2">
-                        {["Self Discovery", "Skill Gap", "Career Match", "College Choices"].map(
+                        {["Self Discovery", "Career Match", "College Choices"].map(
                           (item) => (
                             <span
                               key={item}
@@ -412,6 +396,7 @@ export function LandingExperience() {
                     return (
                       <div
                         key={section.id}
+                        data-reveal="true"
                         className={`journey-node glass-panel rounded-[1.5rem] px-4 py-4 ${
                           isActive ? "journey-node-active" : ""
                         }`}
@@ -456,6 +441,7 @@ export function LandingExperience() {
                         }
                       >
                         <div
+                          data-reveal="true"
                           className={`story-card glass-panel max-w-xl rounded-[2rem] p-8 shadow-soft md:p-10 ${
                             isActive ? "story-card-active" : ""
                           }`}
@@ -541,7 +527,10 @@ export function LandingExperience() {
 
         <section className="relative flex min-h-[72vh] items-end px-6 pb-20 md:px-10">
           <div className="mx-auto w-full max-w-7xl">
-            <div className="dashboard-glow glass-panel max-w-3xl rounded-[2rem] p-8 shadow-soft md:p-10">
+            <div
+              data-reveal="true"
+              className="dashboard-glow glass-panel max-w-3xl rounded-[2rem] p-8 shadow-soft md:p-10"
+            >
               <div className="flex items-center gap-3 text-sky-200">
                 <Milestone className="h-5 w-5" />
                 <span className="section-kicker text-sm uppercase text-slate-400">

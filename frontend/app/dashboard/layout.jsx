@@ -6,6 +6,7 @@ import {
   BarChart3,
   BrainCircuit,
   GraduationCap,
+  Laptop2,
   LayoutDashboard,
   Sparkles,
   Target,
@@ -42,6 +43,11 @@ const navItems = [
     label: "AI Summary",
     icon: BrainCircuit,
   },
+  {
+    href: "/dashboard/simulation",
+    label: "Simulation",
+    icon: Laptop2,
+  },
 ];
 
 function getTitle(pathname) {
@@ -63,6 +69,10 @@ function getTitle(pathname) {
 
   if (pathname === "/dashboard/ai") {
     return "AI Summary";
+  }
+
+  if (pathname === "/dashboard/simulation") {
+    return "Simulation";
   }
 
   return "Dashboard";

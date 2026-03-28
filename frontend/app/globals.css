@@ -47,12 +47,23 @@ a {
 }
 
 .story-shell {
+  position: relative;
   background:
     radial-gradient(circle at 50% -10%, rgba(86, 122, 182, 0.18), transparent 34%),
     radial-gradient(circle at 14% 40%, rgba(59, 88, 142, 0.12), transparent 28%),
     radial-gradient(circle at 86% 42%, rgba(255, 146, 98, 0.14), transparent 24%),
     linear-gradient(180deg, rgba(8, 14, 32, 0.96), rgba(5, 8, 22, 0.86)),
     #050816;
+}
+
+.story-shell::after {
+  content: "";
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: 7rem;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(8, 14, 32, 0.95), rgba(8, 14, 32, 0));
+  z-index: 2;
 }
 
 .glass-panel {
@@ -74,6 +85,30 @@ a {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+.shiny-text {
+  display: inline-block;
+  background-image: linear-gradient(
+    120deg,
+    rgba(232, 239, 255, 0.78) 0%,
+    rgba(232, 239, 255, 0.82) 28%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 205, 172, 0.98) 62%,
+    rgba(255, 184, 132, 0.9) 74%,
+    rgba(232, 239, 255, 0.8) 100%
+  );
+  background-size: 240% auto;
+  background-position: 150% center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 18px rgba(255, 196, 152, 0.12));
+  text-shadow:
+    0 0 18px rgba(255, 255, 255, 0.08),
+    0 0 34px rgba(255, 190, 145, 0.08);
+  animation: shiny-text-sweep 3.8s linear infinite;
 }
 
 .landing-aurora,
@@ -310,6 +345,15 @@ a {
   55%,
   100% {
     transform: translateX(140%);
+  }
+}
+
+@keyframes shiny-text-sweep {
+  0% {
+    background-position: 150% center;
+  }
+  100% {
+    background-position: -50% center;
   }
 }
 
