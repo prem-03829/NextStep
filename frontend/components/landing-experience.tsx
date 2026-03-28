@@ -128,6 +128,37 @@ export function LandingExperience() {
   const reducedMotion = useReducedMotion();
   const [activeSection, setActiveSection] = useState(0);
   const sectionRefs = useRef<Array<HTMLElement | null>>([]);
+  const heroRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (reducedMotion) return;
+
+    let rafId: number;
+    const updateHero = () => {
+      if (!heroRef.current) return;
+      const scrollY = window.scrollY;
+      const range = 400;
+      const p = Math.min(Math.max(scrollY / range, 0), 1);
+      
+      // Map scroll progress to scale: 1 -> 1.3 and opacity: 1 -> 0
+      const scale = 1 + p * 0.3;
+      const opacity = 1 - p;
+
+      heroRef.current.style.transform = `scale(${scale})`;
+      heroRef.current.style.opacity = opacity.toString();
+      heroRef.current.style.willChange = "transform, opacity";
+    };
+
+    const handleScroll = () => {
+      rafId = requestAnimationFrame(updateHero);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      cancelAnimationFrame(rafId);
+    };
+  }, [reducedMotion]);
 
   useEffect(() => {
     const observers = sectionRefs.current
@@ -238,7 +269,7 @@ export function LandingExperience() {
           <div className="hero-radial hero-radial-warm right-[8%] top-[18%] h-80 w-80" />
 
           <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center text-center">
-            <div data-reveal="true" className="space-y-6">
+            <div ref={heroRef} data-reveal="true" className="space-y-6">
               <h1 className="font-display text-6xl leading-none md:text-8xl xl:text-[8rem]">
                 <span className="shiny-text">NextStep</span>
               </h1>
