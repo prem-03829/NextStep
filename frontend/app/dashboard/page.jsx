@@ -4,6 +4,7 @@ import {
   BarChart3,
   BrainCircuit,
   Compass,
+  Database,
   GraduationCap,
   MapPinned,
   Milestone,
@@ -35,11 +36,11 @@ const collegeTools = [
     icon: BrainCircuit,
   },
   {
-    title: "Compare College",
-    badge: "Side-by-side view",
-    description: "Compare two colleges across costs, outcomes, and fit.",
-    href: "/dashboard/compare",
-    icon: BarChart3,
+    title: "Master Database",
+    badge: "Browse All Data",
+    description: "Explore the structured dataset powering NextStep.",
+    href: "/dashboard/database",
+    icon: Database,
   },
 ];
 
@@ -321,44 +322,50 @@ export default function DashboardPage() {
       </section>
 
       <section className="grid gap-5 xl:grid-cols-[1.5fr_0.7fr]">
-        <div className="glass-panel rounded-[2rem] p-6 shadow-soft">
+        <div className="h-full rounded-2xl border border-white/10 bg-gradient-to-b from-white/5 to-transparent backdrop-blur-xl p-6 flex flex-col justify-between shadow-soft">
           <p className="text-sm uppercase tracking-[0.26em] text-sky-200/80">
             College Discovery Tools
           </p>
-          <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8">
-            {collegeTools.map((tool) => {
-              const Icon = tool.icon;
+          <div className="max-w-7xl mx-auto w-full">
+            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+              {collegeTools.map((tool) => {
+                const Icon = tool.icon;
 
-              return (
-                <article
-                  key={tool.title}
-                  className="group relative flex min-h-[360px] flex-col overflow-hidden rounded-[1.75rem] border border-white/10 bg-[linear-gradient(180deg,rgba(11,16,34,0.82),rgba(15,22,42,0.55))] p-6 transition duration-300 hover:-translate-y-1 hover:border-sky-200/20"
-                >
-                  <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white/5 to-transparent opacity-70" />
-                  <div className="flex items-start justify-between gap-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-sky-300/20 to-cyan-100/10 text-sky-100">
-                      <Icon className="h-5 w-5" />
-                    </div>
-                    <span className="max-w-[10rem] rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-sky-100">
-                      {tool.badge}
-                    </span>
-                  </div>
-                  <h2 className="mt-6 max-w-[10ch] font-display text-[2.35rem] leading-[1.04] text-white">
-                    {tool.title}
-                  </h2>
-                  <p className="mt-4 max-w-[24ch] text-[15px] leading-6 text-slate-300">
-                    {tool.description}
-                  </p>
-                  <Link
-                    href={tool.href}
-                    className="mt-auto inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm text-white transition hover:bg-white/15"
+                return (
+                  <article
+                    key={tool.title}
+                    className="h-full rounded-2xl border border-white/10 bg-gradient-to-b from-white/5 to-transparent backdrop-blur-xl p-6 flex flex-col justify-between transition duration-300 hover:-translate-y-1 hover:border-sky-200/20 shadow-soft group relative overflow-hidden min-w-0"
                   >
-                    Open Tool
-                    <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </article>
-              );
-            })}
+                    <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white/5 to-transparent opacity-50" />
+                    <div className="relative z-10">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-sky-300/20 to-cyan-100/10 text-sky-100">
+                          <Icon className="h-5 w-5" />
+                        </div>
+                        <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-sky-100">
+                          {tool.badge}
+                        </span>
+                      </div>
+                      <h3 className="text-2xl md:text-3xl font-display leading-tight tracking-tight break-words text-white">
+                        {tool.title}
+                      </h3>
+                      <p className="mt-4 text-sm text-white/70 leading-relaxed line-clamp-3">
+                        {tool.description}
+                      </p>
+                    </div>
+                    <div className="mt-auto pt-4 relative z-10">
+                      <Link
+                        href={tool.href}
+                        className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm text-white transition hover:bg-white/15"
+                      >
+                        Open Tool
+                        <ArrowRight className="h-4 w-4" />
+                      </Link>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
           </div>
         </div>
 

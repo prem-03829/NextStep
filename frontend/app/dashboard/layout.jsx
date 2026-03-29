@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import {
   BarChart3,
   BrainCircuit,
+  Database,
   GraduationCap,
   Laptop2,
   LayoutDashboard,
@@ -48,6 +49,11 @@ const navItems = [
     label: "Simulation",
     icon: Laptop2,
   },
+  {
+    href: "/dashboard/database",
+    label: "JSON Viewer",
+    icon: Database,
+  },
 ];
 
 function getTitle(pathname) {
@@ -73,6 +79,10 @@ function getTitle(pathname) {
 
   if (pathname === "/dashboard/simulation") {
     return "Simulation";
+  }
+
+  if (pathname === "/dashboard/database") {
+    return "Master Database Explorer";
   }
 
   return "Dashboard";
