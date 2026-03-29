@@ -8,6 +8,34 @@ import {
   sendChatMessage,
 } from "@/lib/api";
 
+function formatSummary(report) {
+  if (!report) {
+    return "No summary returned.";
+  }
+
+  if (typeof report === "string") {
+    return report;
+  }
+
+  const sections = [
+    report.career_target ? `Career target: ${report.career_target}` : null,
+    Array.isArray(report.roadmap) && report.roadmap.length
+      ? `Roadmap: ${report.roadmap.join(" -> ")}`
+      : null,
+    report.college_decision
+      ? `College decision: ${report.college_decision}`
+      : null,
+    report.roi_strategy ? `ROI strategy: ${report.roi_strategy}` : null,
+    report.travel_strategy
+      ? `Travel strategy: ${report.travel_strategy}`
+      : null,
+    report.goal_strategy ? `Goal strategy: ${report.goal_strategy}` : null,
+    report.final_advice ? `Final advice: ${report.final_advice}` : null,
+  ].filter(Boolean);
+
+  return sections.join("\n\n") || "No summary returned.";
+}
+
 export default function AiPage() {
   const [rank, setRank] = useState(12000);
   const [preferredCourse, setPreferredCourse] = useState("CS");
@@ -33,7 +61,9 @@ export default function AiPage() {
           .filter(Boolean),
       });
 
-      setSummary(response.personalized_report || response.error || "No summary returned.");
+      setSummary(
+        formatSummary(response.personalized_report || response.error),
+      );
       setMentorAdvice(response.ai_mentor_advice || "");
     } catch (error) {
       setSummary(`Could not reach ${getApiBaseUrl()}. Start the backend and try again.`);
@@ -103,7 +133,7 @@ export default function AiPage() {
           {summaryLoading ? "Generating..." : "Generate Summary"}
         </button>
 
-        <p className="mt-6 max-w-3xl text-base leading-8 text-slate-300">
+        <p className="mt-6 max-w-3xl whitespace-pre-line text-base leading-8 text-slate-300">
           {summary}
         </p>
 
