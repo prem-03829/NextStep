@@ -1,0 +1,2 @@
+def generate_college_explanation(college):
+    return f"This is {college.get('college')} in {college.get('city')}, offering {college.get('degree')} in {college.get('branch')}. It has a {college.get('confidence')*100:.0f}% admission confidence for your input."

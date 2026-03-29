@@ -1,0 +1,4657 @@
+[
+  {
+    "id": "PILLAI_PANVEL",
+    "college_name": "Pillai College of Engineering",
+    "city": "New Panvel",
+    "state": "Maharashtra",
+    "type": "private_autonomous",
+    "overall_rating": 7.2,
+    "scores": {
+      "placement": 7.0,
+      "research": 6.5,
+      "campus": 7.5,
+      "faculty": 7.0,
+      "infrastructure": 7.5
+    },
+    "roi": {
+      "roi_score": 7.0,
+      "payback_years": 4
+    },
+    "facilities": [
+      "Hostel",
+      "Library",
+      "Sports Complex",
+      "Labs",
+      "Medical",
+      "WiFi Campus",
+      "Auditorium"
+    ],
+    "courses": [
+      {
+        "course_id": "PCE_CS_BTECH",
+        "degree": "B.E.",
+        "branch": "Computer Engineering",
+        "duration_years": 4,
+        "seat_intake": 120,
+        "difficulty": "medium",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 85,
+          "JEE_MAIN_PERCENTILE": 75,
+          "OBC": 80,
+          "SC": 70
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 50,
+          "jee_main_cutoff_percentile": 75,
+          "mht_cet_cutoff_percentile": 85
+        },
+        "fees": {
+          "total_fees": 700000,
+          "hostel_fees": 90000,
+          "other_fees": 25000
+        },
+        "placements": {
+          "registered_students": 115,
+          "participating_students": 100,
+          "students_placed": 75,
+          "placement_percentage": 68,
+          "companies_visited": 60,
+          "total_offers": 100,
+          "offers_accepted": 72,
+          "avg_package": 550000,
+          "median_package": 420000,
+          "highest_package": 5000000,
+          "top_roles": [
+            "Software Engineer",
+            "Web Developer",
+            "Data Analyst",
+            "System Analyst"
+          ],
+          "top_companies": [
+            "TCS",
+            "Infosys",
+            "Wipro",
+            "Capgemini",
+            "HCL"
+          ]
+        },
+        "career_paths": [
+          "Software Engineer",
+          "Web Developer",
+          "Data Analyst",
+          "IT Support"
+        ],
+        "tags": [
+          "mumbai_affiliated",
+          "autonomous",
+          "navi_mumbai"
+        ]
+      },
+      {
+        "course_id": "PCE_IT_BTECH",
+        "degree": "B.E.",
+        "branch": "Information Technology",
+        "duration_years": 4,
+        "seat_intake": 60,
+        "difficulty": "medium",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 82,
+          "JEE_MAIN_PERCENTILE": 72,
+          "OBC": 77,
+          "SC": 65
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 50,
+          "jee_main_cutoff_percentile": 72,
+          "mht_cet_cutoff_percentile": 82
+        },
+        "fees": {
+          "total_fees": 700000,
+          "hostel_fees": 90000,
+          "other_fees": 25000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 50,
+          "students_placed": 36,
+          "placement_percentage": 65,
+          "companies_visited": 50,
+          "total_offers": 70,
+          "offers_accepted": 35,
+          "avg_package": 500000,
+          "median_package": 400000,
+          "highest_package": 4000000,
+          "top_roles": [
+            "Software Engineer",
+            "Network Engineer",
+            "Web Developer"
+          ],
+          "top_companies": [
+            "TCS",
+            "Wipro",
+            "HCL",
+            "Tech Mahindra"
+          ]
+        },
+        "career_paths": [
+          "Software Engineer",
+          "Network Engineer",
+          "System Administrator"
+        ],
+        "tags": [
+          "mumbai_affiliated",
+          "autonomous"
+        ]
+      },
+      {
+        "course_id": "PCE_MECH_BTECH",
+        "degree": "B.E.",
+        "branch": "Mechanical Engineering",
+        "duration_years": 4,
+        "seat_intake": 60,
+        "difficulty": "medium",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 75,
+          "JEE_MAIN_PERCENTILE": 65,
+          "OBC": 70,
+          "SC": 55
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 50,
+          "jee_main_cutoff_percentile": 65,
+          "mht_cet_cutoff_percentile": 75
+        },
+        "fees": {
+          "total_fees": 650000,
+          "hostel_fees": 90000,
+          "other_fees": 25000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 48,
+          "students_placed": 30,
+          "placement_percentage": 57,
+          "companies_visited": 35,
+          "total_offers": 50,
+          "offers_accepted": 28,
+          "avg_package": 380000,
+          "median_package": 300000,
+          "highest_package": 2500000,
+          "top_roles": [
+            "Design Engineer",
+            "Production Engineer",
+            "Quality Analyst"
+          ],
+          "top_companies": [
+            "L&T",
+            "Tata Motors",
+            "Mahindra",
+            "Bajaj"
+          ]
+        },
+        "career_paths": [
+          "Design Engineer",
+          "Manufacturing",
+          "Quality Control"
+        ],
+        "tags": [
+          "core_engineering",
+          "mumbai_affiliated"
+        ]
+      },
+      {
+        "course_id": "PCE_CIVIL_BTECH",
+        "degree": "B.E.",
+        "branch": "Civil Engineering",
+        "duration_years": 4,
+        "seat_intake": 60,
+        "difficulty": "low",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 65,
+          "JEE_MAIN_PERCENTILE": 55,
+          "OBC": 60,
+          "SC": 45
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 50,
+          "jee_main_cutoff_percentile": 55,
+          "mht_cet_cutoff_percentile": 65
+        },
+        "fees": {
+          "total_fees": 620000,
+          "hostel_fees": 90000,
+          "other_fees": 25000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 45,
+          "students_placed": 27,
+          "placement_percentage": 52,
+          "companies_visited": 25,
+          "total_offers": 40,
+          "offers_accepted": 25,
+          "avg_package": 320000,
+          "median_package": 280000,
+          "highest_package": 2000000,
+          "top_roles": [
+            "Site Engineer",
+            "Structural Engineer",
+            "Project Manager (Junior)"
+          ],
+          "top_companies": [
+            "L&T Construction",
+            "Shapoorji Pallonji",
+            "Gammon India",
+            "MMRDA"
+          ]
+        },
+        "career_paths": [
+          "Structural Engineer",
+          "Site Engineer",
+          "Urban Planner"
+        ],
+        "tags": [
+          "core_engineering",
+          "mumbai_affiliated"
+        ]
+      },
+      {
+        "course_id": "PCE_EXTC_BTECH",
+        "degree": "B.E.",
+        "branch": "Electronics & Telecommunication",
+        "duration_years": 4,
+        "seat_intake": 60,
+        "difficulty": "medium",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 78,
+          "JEE_MAIN_PERCENTILE": 68,
+          "OBC": 73,
+          "SC": 58
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 50,
+          "jee_main_cutoff_percentile": 68,
+          "mht_cet_cutoff_percentile": 78
+        },
+        "fees": {
+          "total_fees": 670000,
+          "hostel_fees": 90000,
+          "other_fees": 25000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 48,
+          "students_placed": 33,
+          "placement_percentage": 60,
+          "companies_visited": 40,
+          "total_offers": 55,
+          "offers_accepted": 31,
+          "avg_package": 450000,
+          "median_package": 370000,
+          "highest_package": 3500000,
+          "top_roles": [
+            "Embedded Engineer",
+            "Network Engineer",
+            "Software Engineer"
+          ],
+          "top_companies": [
+            "Wipro",
+            "Tech Mahindra",
+            "HCL",
+            "L&T Tech"
+          ]
+        },
+        "career_paths": [
+          "Embedded Engineer",
+          "Telecom Engineer",
+          "Software Engineer"
+        ],
+        "tags": [
+          "mumbai_affiliated"
+        ]
+      },
+      {
+        "course_id": "PCE_MBA",
+        "degree": "MBA",
+        "branch": "Management",
+        "duration_years": 2,
+        "seat_intake": 60,
+        "difficulty": "medium",
+        "cutoffs": {
+          "OPEN_PERCENTAGE": 50,
+          "OBC_PERCENTAGE": 45,
+          "SC_PERCENTAGE": 40
+        },
+        "eligibility": {
+          "exam": "MAH-CET / CAT / CMAT",
+          "min_percentage": 50,
+          "cat_percentile": 70,
+          "mah_cet_percentile": 75
+        },
+        "fees": {
+          "total_fees": 600000,
+          "hostel_fees": 90000,
+          "other_fees": 30000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 52,
+          "students_placed": 40,
+          "placement_percentage": 72,
+          "companies_visited": 35,
+          "total_offers": 60,
+          "offers_accepted": 38,
+          "avg_package": 450000,
+          "median_package": 370000,
+          "highest_package": 2000000,
+          "top_roles": [
+            "Business Analyst",
+            "Marketing Executive",
+            "HR Executive",
+            "Operations Manager"
+          ],
+          "top_companies": [
+            "HDFC",
+            "ICICI",
+            "Axis Bank",
+            "Deloitte",
+            "TCS"
+          ]
+        },
+        "career_paths": [
+          "Business Analyst",
+          "Marketing",
+          "HR",
+          "Operations",
+          "Banking"
+        ],
+        "tags": [
+          "management",
+          "navi_mumbai"
+        ]
+      },
+      {
+        "course_id": "PCE_BARCH",
+        "degree": "B.Arch",
+        "branch": "Architecture",
+        "duration_years": 5,
+        "seat_intake": 40,
+        "difficulty": "high",
+        "cutoffs": {
+          "NATA_SCORE": 100,
+          "OBC_NATA": 90,
+          "SC_NATA": 80
+        },
+        "eligibility": {
+          "exam": "NATA / JEE Paper 2",
+          "min_percentage": 50,
+          "nata_cutoff_score": 100,
+          "jee_paper2_percentile": 70
+        },
+        "fees": {
+          "total_fees": 750000,
+          "hostel_fees": 90000,
+          "other_fees": 30000
+        },
+        "placements": {
+          "registered_students": 38,
+          "participating_students": 32,
+          "students_placed": 22,
+          "placement_percentage": 62,
+          "companies_visited": 25,
+          "total_offers": 35,
+          "offers_accepted": 21,
+          "avg_package": 400000,
+          "median_package": 330000,
+          "highest_package": 2000000,
+          "top_roles": [
+            "Architect",
+            "Urban Planner",
+            "Interior Designer",
+            "Draftsman"
+          ],
+          "top_companies": [
+            "MMRDA",
+            "CIDCO",
+            "Local Architecture Firms",
+            "Godrej Properties"
+          ]
+        },
+        "career_paths": [
+          "Architect",
+          "Urban Planner",
+          "Interior Designer",
+          "Real Estate Consultant"
+        ],
+        "tags": [
+          "architecture",
+          "navi_mumbai"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SARASWATI_KHARGHAR",
+    "college_name": "Saraswati College of Engineering",
+    "city": "Kharghar, Navi Mumbai",
+    "state": "Maharashtra",
+    "type": "private",
+    "overall_rating": 6.8,
+    "scores": {
+      "placement": 6.5,
+      "research": 5.8,
+      "campus": 7.0,
+      "faculty": 6.8,
+      "infrastructure": 7.0
+    },
+    "roi": {
+      "roi_score": 6.8,
+      "payback_years": 5
+    },
+    "facilities": [
+      "Library",
+      "Sports Complex",
+      "Labs",
+      "WiFi Campus",
+      "Canteen"
+    ],
+    "courses": [
+      {
+        "course_id": "SCOEK_CS_BTECH",
+        "degree": "B.E.",
+        "branch": "Computer Engineering",
+        "duration_years": 4,
+        "seat_intake": 120,
+        "difficulty": "low",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 70,
+          "JEE_MAIN_PERCENTILE": 60,
+          "OBC": 65,
+          "SC": 50
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 45,
+          "jee_main_cutoff_percentile": 60,
+          "mht_cet_cutoff_percentile": 70
+        },
+        "fees": {
+          "total_fees": 600000,
+          "hostel_fees": 0,
+          "other_fees": 20000
+        },
+        "placements": {
+          "registered_students": 115,
+          "participating_students": 90,
+          "students_placed": 58,
+          "placement_percentage": 58,
+          "companies_visited": 40,
+          "total_offers": 80,
+          "offers_accepted": 56,
+          "avg_package": 400000,
+          "median_package": 340000,
+          "highest_package": 3500000,
+          "top_roles": [
+            "Junior Developer",
+            "Web Developer",
+            "System Analyst"
+          ],
+          "top_companies": [
+            "TCS",
+            "Infosys",
+            "Wipro",
+            "Local IT Companies"
+          ]
+        },
+        "career_paths": [
+          "Software Engineer",
+          "Web Developer",
+          "IT Support"
+        ],
+        "tags": [
+          "navi_mumbai",
+          "mumbai_university"
+        ]
+      },
+      {
+        "course_id": "SCOEK_IT_BTECH",
+        "degree": "B.E.",
+        "branch": "Information Technology",
+        "duration_years": 4,
+        "seat_intake": 60,
+        "difficulty": "low",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 67,
+          "JEE_MAIN_PERCENTILE": 57,
+          "OBC": 62,
+          "SC": 47
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 45,
+          "jee_main_cutoff_percentile": 57,
+          "mht_cet_cutoff_percentile": 67
+        },
+        "fees": {
+          "total_fees": 580000,
+          "hostel_fees": 0,
+          "other_fees": 20000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 45,
+          "students_placed": 27,
+          "placement_percentage": 55,
+          "companies_visited": 30,
+          "total_offers": 45,
+          "offers_accepted": 26,
+          "avg_package": 380000,
+          "median_package": 320000,
+          "highest_package": 2800000,
+          "top_roles": [
+            "Junior Developer",
+            "Network Analyst",
+            "System Admin"
+          ],
+          "top_companies": [
+            "TCS",
+            "Wipro",
+            "Local IT Firms"
+          ]
+        },
+        "career_paths": [
+          "Software Engineer",
+          "Network Admin",
+          "IT Support"
+        ],
+        "tags": [
+          "navi_mumbai",
+          "mumbai_university"
+        ]
+      },
+      {
+        "course_id": "SCOEK_MECH_BTECH",
+        "degree": "B.E.",
+        "branch": "Mechanical Engineering",
+        "duration_years": 4,
+        "seat_intake": 60,
+        "difficulty": "low",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 58,
+          "JEE_MAIN_PERCENTILE": 48,
+          "OBC": 52,
+          "SC": 40
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 45,
+          "jee_main_cutoff_percentile": 48,
+          "mht_cet_cutoff_percentile": 58
+        },
+        "fees": {
+          "total_fees": 560000,
+          "hostel_fees": 0,
+          "other_fees": 20000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 42,
+          "students_placed": 22,
+          "placement_percentage": 48,
+          "companies_visited": 20,
+          "total_offers": 30,
+          "offers_accepted": 21,
+          "avg_package": 300000,
+          "median_package": 260000,
+          "highest_package": 2000000,
+          "top_roles": [
+            "Production Engineer",
+            "Quality Analyst",
+            "Maintenance Engineer"
+          ],
+          "top_companies": [
+            "Bajaj",
+            "L&T",
+            "Local Manufacturing Units"
+          ]
+        },
+        "career_paths": [
+          "Production Engineer",
+          "Quality Control",
+          "Maintenance"
+        ],
+        "tags": [
+          "core_engineering",
+          "mumbai_university"
+        ]
+      },
+      {
+        "course_id": "SCOEK_BSC_CS",
+        "degree": "B.Sc",
+        "branch": "Computer Science",
+        "duration_years": 3,
+        "seat_intake": 60,
+        "difficulty": "low",
+        "cutoffs": {
+          "OPEN_PERCENTAGE": 50,
+          "OBC_PERCENTAGE": 45,
+          "SC_PERCENTAGE": 40
+        },
+        "eligibility": {
+          "exam": "Merit / HSC Percentage",
+          "min_percentage": 50
+        },
+        "fees": {
+          "total_fees": 120000,
+          "hostel_fees": 0,
+          "other_fees": 8000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 44,
+          "students_placed": 24,
+          "placement_percentage": 50,
+          "companies_visited": 20,
+          "total_offers": 35,
+          "offers_accepted": 23,
+          "avg_package": 280000,
+          "median_package": 240000,
+          "highest_package": 1500000,
+          "top_roles": [
+            "Junior Developer",
+            "Data Entry Analyst",
+            "Tech Support"
+          ],
+          "top_companies": [
+            "TCS BPS",
+            "Wipro BPS",
+            "Local IT Firms"
+          ]
+        },
+        "career_paths": [
+          "Software Developer",
+          "Data Analyst",
+          "Further Studies (MCA/M.Sc)"
+        ],
+        "tags": [
+          "affordable",
+          "science",
+          "navi_mumbai"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SIES_NERUL",
+    "college_name": "SIES Graduate School of Technology",
+    "city": "Nerul, Navi Mumbai",
+    "state": "Maharashtra",
+    "type": "private",
+    "overall_rating": 7.0,
+    "scores": {
+      "placement": 6.8,
+      "research": 6.0,
+      "campus": 7.2,
+      "faculty": 7.0,
+      "infrastructure": 7.2
+    },
+    "roi": {
+      "roi_score": 7.0,
+      "payback_years": 4
+    },
+    "facilities": [
+      "Library",
+      "Labs",
+      "WiFi Campus",
+      "Canteen",
+      "Sports Facilities"
+    ],
+    "courses": [
+      {
+        "course_id": "SIES_CS_BTECH",
+        "degree": "B.E.",
+        "branch": "Computer Engineering",
+        "duration_years": 4,
+        "seat_intake": 120,
+        "difficulty": "low",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 72,
+          "JEE_MAIN_PERCENTILE": 62,
+          "OBC": 67,
+          "SC": 52
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 45,
+          "jee_main_cutoff_percentile": 62,
+          "mht_cet_cutoff_percentile": 72
+        },
+        "fees": {
+          "total_fees": 620000,
+          "hostel_fees": 0,
+          "other_fees": 22000
+        },
+        "placements": {
+          "registered_students": 115,
+          "participating_students": 95,
+          "students_placed": 65,
+          "placement_percentage": 62,
+          "companies_visited": 45,
+          "total_offers": 90,
+          "offers_accepted": 62,
+          "avg_package": 450000,
+          "median_package": 370000,
+          "highest_package": 4000000,
+          "top_roles": [
+            "Software Engineer",
+            "Web Developer",
+            "Data Analyst"
+          ],
+          "top_companies": [
+            "TCS",
+            "Infosys",
+            "Wipro",
+            "Cognizant",
+            "Local Startups"
+          ]
+        },
+        "career_paths": [
+          "Software Engineer",
+          "Web Developer",
+          "Data Analyst"
+        ],
+        "tags": [
+          "navi_mumbai",
+          "mumbai_university"
+        ]
+      },
+      {
+        "course_id": "SIES_IT_BTECH",
+        "degree": "B.E.",
+        "branch": "Information Technology",
+        "duration_years": 4,
+        "seat_intake": 60,
+        "difficulty": "low",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 69,
+          "JEE_MAIN_PERCENTILE": 59,
+          "OBC": 64,
+          "SC": 49
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 45,
+          "jee_main_cutoff_percentile": 59,
+          "mht_cet_cutoff_percentile": 69
+        },
+        "fees": {
+          "total_fees": 600000,
+          "hostel_fees": 0,
+          "other_fees": 22000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 48,
+          "students_placed": 31,
+          "placement_percentage": 60,
+          "companies_visited": 35,
+          "total_offers": 50,
+          "offers_accepted": 30,
+          "avg_package": 420000,
+          "median_package": 350000,
+          "highest_package": 3000000,
+          "top_roles": [
+            "Software Developer",
+            "IT Analyst",
+            "System Admin"
+          ],
+          "top_companies": [
+            "TCS",
+            "Wipro",
+            "HCL",
+            "Local IT Firms"
+          ]
+        },
+        "career_paths": [
+          "Software Engineer",
+          "IT Analyst",
+          "System Admin"
+        ],
+        "tags": [
+          "navi_mumbai",
+          "mumbai_university"
+        ]
+      },
+      {
+        "course_id": "SIES_EXTC_BTECH",
+        "degree": "B.E.",
+        "branch": "Electronics & Telecommunication",
+        "duration_years": 4,
+        "seat_intake": 60,
+        "difficulty": "low",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 65,
+          "JEE_MAIN_PERCENTILE": 55,
+          "OBC": 60,
+          "SC": 45
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 45,
+          "jee_main_cutoff_percentile": 55,
+          "mht_cet_cutoff_percentile": 65
+        },
+        "fees": {
+          "total_fees": 590000,
+          "hostel_fees": 0,
+          "other_fees": 22000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 44,
+          "students_placed": 26,
+          "placement_percentage": 55,
+          "companies_visited": 28,
+          "total_offers": 40,
+          "offers_accepted": 25,
+          "avg_package": 380000,
+          "median_package": 320000,
+          "highest_package": 2800000,
+          "top_roles": [
+            "Embedded Engineer",
+            "Software Engineer",
+            "Network Engineer"
+          ],
+          "top_companies": [
+            "Wipro",
+            "L&T",
+            "Tech Mahindra"
+          ]
+        },
+        "career_paths": [
+          "Embedded Engineer",
+          "Telecom Engineer",
+          "Software Engineer"
+        ],
+        "tags": [
+          "navi_mumbai",
+          "mumbai_university"
+        ]
+      },
+      {
+        "course_id": "SIES_MBA",
+        "degree": "MBA",
+        "branch": "Management",
+        "duration_years": 2,
+        "seat_intake": 60,
+        "difficulty": "medium",
+        "cutoffs": {
+          "OPEN_PERCENTAGE": 50,
+          "OBC_PERCENTAGE": 45,
+          "SC_PERCENTAGE": 40
+        },
+        "eligibility": {
+          "exam": "MAH-CET / CAT / CMAT",
+          "min_percentage": 50,
+          "cat_percentile": 65,
+          "mah_cet_percentile": 70
+        },
+        "fees": {
+          "total_fees": 550000,
+          "hostel_fees": 0,
+          "other_fees": 28000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 50,
+          "students_placed": 36,
+          "placement_percentage": 68,
+          "companies_visited": 30,
+          "total_offers": 52,
+          "offers_accepted": 34,
+          "avg_package": 400000,
+          "median_package": 340000,
+          "highest_package": 1800000,
+          "top_roles": [
+            "Business Analyst",
+            "HR Executive",
+            "Marketing Executive",
+            "Operations"
+          ],
+          "top_companies": [
+            "HDFC",
+            "Bajaj Finance",
+            "Axis Bank",
+            "Local Companies"
+          ]
+        },
+        "career_paths": [
+          "Business Analyst",
+          "HR",
+          "Marketing",
+          "Operations",
+          "Banking"
+        ],
+        "tags": [
+          "management",
+          "navi_mumbai",
+          "affordable"
+        ]
+      },
+      {
+        "course_id": "SIES_BSC_IT",
+        "degree": "B.Sc",
+        "branch": "Information Technology",
+        "duration_years": 3,
+        "seat_intake": 60,
+        "difficulty": "low",
+        "cutoffs": {
+          "OPEN_PERCENTAGE": 45,
+          "OBC_PERCENTAGE": 40,
+          "SC_PERCENTAGE": 35
+        },
+        "eligibility": {
+          "exam": "Merit / HSC Percentage",
+          "min_percentage": 45
+        },
+        "fees": {
+          "total_fees": 100000,
+          "hostel_fees": 0,
+          "other_fees": 7000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 42,
+          "students_placed": 22,
+          "placement_percentage": 48,
+          "companies_visited": 18,
+          "total_offers": 32,
+          "offers_accepted": 21,
+          "avg_package": 260000,
+          "median_package": 220000,
+          "highest_package": 1200000,
+          "top_roles": [
+            "Junior Developer",
+            "Tech Support",
+            "Data Entry Analyst"
+          ],
+          "top_companies": [
+            "TCS BPS",
+            "Wipro",
+            "Local IT Firms"
+          ]
+        },
+        "career_paths": [
+          "Software Developer",
+          "Tech Support",
+          "MCA / M.Sc (Further Studies)"
+        ],
+        "tags": [
+          "affordable",
+          "science",
+          "navi_mumbai"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "DJSANGHVI",
+    "college_name": "D.J. Sanghvi College of Engineering",
+    "city": "Vile Parle, Mumbai",
+    "state": "Maharashtra",
+    "type": "private_autonomous",
+    "overall_rating": 8.0,
+    "scores": {
+      "placement": 8.0,
+      "research": 7.0,
+      "campus": 7.8,
+      "faculty": 7.8,
+      "infrastructure": 8.0
+    },
+    "roi": {
+      "roi_score": 8.2,
+      "payback_years": 3
+    },
+    "facilities": [
+      "Library",
+      "Labs",
+      "WiFi Campus",
+      "Canteen",
+      "Sports Facilities",
+      "Auditorium"
+    ],
+    "courses": [
+      {
+        "course_id": "DJSANGHVI_CS_BTECH",
+        "degree": "B.E.",
+        "branch": "Computer Engineering",
+        "duration_years": 4,
+        "seat_intake": 120,
+        "difficulty": "high",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 95,
+          "JEE_MAIN_PERCENTILE": 85,
+          "OBC": 90,
+          "SC": 80
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 50,
+          "jee_main_cutoff_percentile": 85,
+          "mht_cet_cutoff_percentile": 95
+        },
+        "fees": {
+          "total_fees": 700000,
+          "hostel_fees": 0,
+          "other_fees": 28000
+        },
+        "placements": {
+          "registered_students": 115,
+          "participating_students": 108,
+          "students_placed": 92,
+          "placement_percentage": 82,
+          "companies_visited": 90,
+          "total_offers": 160,
+          "offers_accepted": 89,
+          "avg_package": 900000,
+          "median_package": 720000,
+          "highest_package": 10000000,
+          "top_roles": [
+            "Software Engineer",
+            "Data Analyst",
+            "Web Developer",
+            "ML Engineer"
+          ],
+          "top_companies": [
+            "TCS",
+            "Infosys",
+            "Capgemini",
+            "Amazon",
+            "Accenture"
+          ]
+        },
+        "career_paths": [
+          "Software Engineer",
+          "Data Analyst",
+          "Product Manager",
+          "Web Developer"
+        ],
+        "tags": [
+          "top_mumbai_private",
+          "autonomous",
+          "mumbai_city"
+        ]
+      },
+      {
+        "course_id": "DJSANGHVI_IT_BTECH",
+        "degree": "B.E.",
+        "branch": "Information Technology",
+        "duration_years": 4,
+        "seat_intake": 60,
+        "difficulty": "high",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 93,
+          "JEE_MAIN_PERCENTILE": 83,
+          "OBC": 87,
+          "SC": 77
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 50,
+          "jee_main_cutoff_percentile": 83,
+          "mht_cet_cutoff_percentile": 93
+        },
+        "fees": {
+          "total_fees": 680000,
+          "hostel_fees": 0,
+          "other_fees": 28000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 54,
+          "students_placed": 44,
+          "placement_percentage": 80,
+          "companies_visited": 75,
+          "total_offers": 90,
+          "offers_accepted": 42,
+          "avg_package": 820000,
+          "median_package": 670000,
+          "highest_package": 8000000,
+          "top_roles": [
+            "Software Engineer",
+            "Network Engineer",
+            "Data Analyst"
+          ],
+          "top_companies": [
+            "TCS",
+            "Wipro",
+            "Accenture",
+            "IBM"
+          ]
+        },
+        "career_paths": [
+          "Software Engineer",
+          "Network Engineer",
+          "Data Analyst"
+        ],
+        "tags": [
+          "top_mumbai_private",
+          "autonomous"
+        ]
+      },
+      {
+        "course_id": "DJSANGHVI_EXTC_BTECH",
+        "degree": "B.E.",
+        "branch": "Electronics & Telecommunication",
+        "duration_years": 4,
+        "seat_intake": 120,
+        "difficulty": "high",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 90,
+          "JEE_MAIN_PERCENTILE": 80,
+          "OBC": 84,
+          "SC": 74
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 50,
+          "jee_main_cutoff_percentile": 80,
+          "mht_cet_cutoff_percentile": 90
+        },
+        "fees": {
+          "total_fees": 670000,
+          "hostel_fees": 0,
+          "other_fees": 28000
+        },
+        "placements": {
+          "registered_students": 115,
+          "participating_students": 100,
+          "students_placed": 75,
+          "placement_percentage": 72,
+          "companies_visited": 65,
+          "total_offers": 110,
+          "offers_accepted": 72,
+          "avg_package": 720000,
+          "median_package": 580000,
+          "highest_package": 7500000,
+          "top_roles": [
+            "Embedded Engineer",
+            "VLSI Engineer",
+            "Software Engineer"
+          ],
+          "top_companies": [
+            "Wipro",
+            "L&T",
+            "Tech Mahindra",
+            "Qualcomm"
+          ]
+        },
+        "career_paths": [
+          "Embedded Engineer",
+          "VLSI Designer",
+          "Software Engineer"
+        ],
+        "tags": [
+          "top_mumbai_private",
+          "autonomous"
+        ]
+      },
+      {
+        "course_id": "DJSANGHVI_MECH_BTECH",
+        "degree": "B.E.",
+        "branch": "Mechanical Engineering",
+        "duration_years": 4,
+        "seat_intake": 60,
+        "difficulty": "medium",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 85,
+          "JEE_MAIN_PERCENTILE": 75,
+          "OBC": 80,
+          "SC": 68
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 50,
+          "jee_main_cutoff_percentile": 75,
+          "mht_cet_cutoff_percentile": 85
+        },
+        "fees": {
+          "total_fees": 650000,
+          "hostel_fees": 0,
+          "other_fees": 28000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 50,
+          "students_placed": 35,
+          "placement_percentage": 65,
+          "companies_visited": 40,
+          "total_offers": 55,
+          "offers_accepted": 33,
+          "avg_package": 500000,
+          "median_package": 400000,
+          "highest_package": 4000000,
+          "top_roles": [
+            "Design Engineer",
+            "Manufacturing Engineer",
+            "Consultant"
+          ],
+          "top_companies": [
+            "Tata Motors",
+            "Mahindra",
+            "L&T",
+            "Godrej"
+          ]
+        },
+        "career_paths": [
+          "Design Engineer",
+          "Manufacturing",
+          "R&D"
+        ],
+        "tags": [
+          "core_engineering",
+          "top_mumbai_private"
+        ]
+      },
+      {
+        "course_id": "DJSANGHVI_MBA",
+        "degree": "MBA",
+        "branch": "Management",
+        "duration_years": 2,
+        "seat_intake": 60,
+        "difficulty": "high",
+        "cutoffs": {
+          "OPEN_PERCENTAGE": 50,
+          "OBC_PERCENTAGE": 45,
+          "SC_PERCENTAGE": 40
+        },
+        "eligibility": {
+          "exam": "MAH-CET / CAT / CMAT",
+          "min_percentage": 50,
+          "cat_percentile": 80,
+          "mah_cet_percentile": 85
+        },
+        "fees": {
+          "total_fees": 650000,
+          "hostel_fees": 0,
+          "other_fees": 32000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 55,
+          "students_placed": 46,
+          "placement_percentage": 80,
+          "companies_visited": 45,
+          "total_offers": 75,
+          "offers_accepted": 44,
+          "avg_package": 650000,
+          "median_package": 520000,
+          "highest_package": 2500000,
+          "top_roles": [
+            "Business Analyst",
+            "Marketing Manager",
+            "HR Manager",
+            "Finance Analyst"
+          ],
+          "top_companies": [
+            "Deloitte",
+            "EY",
+            "HDFC",
+            "Axis Bank",
+            "Amazon"
+          ]
+        },
+        "career_paths": [
+          "Business Analyst",
+          "Marketing",
+          "Finance",
+          "HR",
+          "Consulting"
+        ],
+        "tags": [
+          "management",
+          "mumbai_city",
+          "autonomous"
+        ]
+      },
+      {
+        "course_id": "DJSANGHVI_BCOM",
+        "degree": "B.Com",
+        "branch": "Commerce",
+        "duration_years": 3,
+        "seat_intake": 120,
+        "difficulty": "medium",
+        "cutoffs": {
+          "OPEN_PERCENTAGE": 60,
+          "OBC_PERCENTAGE": 55,
+          "SC_PERCENTAGE": 50
+        },
+        "eligibility": {
+          "exam": "Merit / HSC Percentage",
+          "min_percentage": 60
+        },
+        "fees": {
+          "total_fees": 150000,
+          "hostel_fees": 0,
+          "other_fees": 10000
+        },
+        "placements": {
+          "registered_students": 115,
+          "participating_students": 90,
+          "students_placed": 62,
+          "placement_percentage": 65,
+          "companies_visited": 40,
+          "total_offers": 90,
+          "offers_accepted": 59,
+          "avg_package": 350000,
+          "median_package": 290000,
+          "highest_package": 1500000,
+          "top_roles": [
+            "Accountant",
+            "Finance Analyst",
+            "Tax Consultant",
+            "Audit Associate"
+          ],
+          "top_companies": [
+            "Deloitte",
+            "EY",
+            "KPMG",
+            "HDFC Bank",
+            "ICICI Bank"
+          ]
+        },
+        "career_paths": [
+          "CA",
+          "Financial Analyst",
+          "Banking",
+          "Further Studies (MBA/M.Com)"
+        ],
+        "tags": [
+          "commerce",
+          "affordable",
+          "mumbai_city"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "KJ_SOMAIYA_ENGG",
+    "college_name": "K.J. Somaiya College of Engineering",
+    "city": "Vidyavihar, Mumbai",
+    "state": "Maharashtra",
+    "type": "private_autonomous",
+    "overall_rating": 7.8,
+    "scores": {
+      "placement": 7.8,
+      "research": 7.0,
+      "campus": 8.0,
+      "faculty": 7.5,
+      "infrastructure": 8.0
+    },
+    "roi": {
+      "roi_score": 7.8,
+      "payback_years": 3
+    },
+    "facilities": [
+      "Library",
+      "Labs",
+      "WiFi Campus",
+      "Canteen",
+      "Sports Complex",
+      "Auditorium"
+    ],
+    "courses": [
+      {
+        "course_id": "KJSCE_CS_BTECH",
+        "degree": "B.E.",
+        "branch": "Computer Engineering",
+        "duration_years": 4,
+        "seat_intake": 120,
+        "difficulty": "high",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 93,
+          "JEE_MAIN_PERCENTILE": 83,
+          "OBC": 88,
+          "SC": 77
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 50,
+          "jee_main_cutoff_percentile": 83,
+          "mht_cet_cutoff_percentile": 93
+        },
+        "fees": {
+          "total_fees": 750000,
+          "hostel_fees": 0,
+          "other_fees": 30000
+        },
+        "placements": {
+          "registered_students": 115,
+          "participating_students": 105,
+          "students_placed": 85,
+          "placement_percentage": 78,
+          "companies_visited": 85,
+          "total_offers": 140,
+          "offers_accepted": 82,
+          "avg_package": 800000,
+          "median_package": 650000,
+          "highest_package": 9000000,
+          "top_roles": [
+            "Software Engineer",
+            "Data Analyst",
+            "Web Developer",
+            "ML Engineer"
+          ],
+          "top_companies": [
+            "TCS",
+            "Infosys",
+            "Accenture",
+            "Capgemini",
+            "Amazon"
+          ]
+        },
+        "career_paths": [
+          "Software Engineer",
+          "Data Analyst",
+          "Product Manager"
+        ],
+        "tags": [
+          "autonomous",
+          "mumbai_city",
+          "good_placements"
+        ]
+      },
+      {
+        "course_id": "KJSCE_IT_BTECH",
+        "degree": "B.E.",
+        "branch": "Information Technology",
+        "duration_years": 4,
+        "seat_intake": 60,
+        "difficulty": "medium",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 90,
+          "JEE_MAIN_PERCENTILE": 80,
+          "OBC": 85,
+          "SC": 74
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 50,
+          "jee_main_cutoff_percentile": 80,
+          "mht_cet_cutoff_percentile": 90
+        },
+        "fees": {
+          "total_fees": 730000,
+          "hostel_fees": 0,
+          "other_fees": 30000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 52,
+          "students_placed": 40,
+          "placement_percentage": 76,
+          "companies_visited": 65,
+          "total_offers": 80,
+          "offers_accepted": 38,
+          "avg_package": 750000,
+          "median_package": 610000,
+          "highest_package": 7500000,
+          "top_roles": [
+            "Software Engineer",
+            "IT Analyst",
+            "Web Developer"
+          ],
+          "top_companies": [
+            "TCS",
+            "Wipro",
+            "HCL",
+            "Capgemini"
+          ]
+        },
+        "career_paths": [
+          "Software Engineer",
+          "IT Analyst",
+          "Network Engineer"
+        ],
+        "tags": [
+          "autonomous",
+          "mumbai_city"
+        ]
+      },
+      {
+        "course_id": "KJSCE_EXTC_BTECH",
+        "degree": "B.E.",
+        "branch": "Electronics & Telecommunication",
+        "duration_years": 4,
+        "seat_intake": 60,
+        "difficulty": "medium",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 87,
+          "JEE_MAIN_PERCENTILE": 77,
+          "OBC": 82,
+          "SC": 70
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 50,
+          "jee_main_cutoff_percentile": 77,
+          "mht_cet_cutoff_percentile": 87
+        },
+        "fees": {
+          "total_fees": 700000,
+          "hostel_fees": 0,
+          "other_fees": 30000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 49,
+          "students_placed": 35,
+          "placement_percentage": 68,
+          "companies_visited": 50,
+          "total_offers": 60,
+          "offers_accepted": 33,
+          "avg_package": 620000,
+          "median_package": 510000,
+          "highest_package": 6000000,
+          "top_roles": [
+            "Embedded Engineer",
+            "Network Engineer",
+            "Software Engineer"
+          ],
+          "top_companies": [
+            "L&T Tech",
+            "Wipro",
+            "HCL",
+            "Siemens"
+          ]
+        },
+        "career_paths": [
+          "Embedded Engineer",
+          "Telecom Engineer",
+          "Software Engineer"
+        ],
+        "tags": [
+          "autonomous",
+          "mumbai_city"
+        ]
+      },
+      {
+        "course_id": "KJSCE_MECH_BTECH",
+        "degree": "B.E.",
+        "branch": "Mechanical Engineering",
+        "duration_years": 4,
+        "seat_intake": 60,
+        "difficulty": "medium",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 82,
+          "JEE_MAIN_PERCENTILE": 72,
+          "OBC": 77,
+          "SC": 65
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 50,
+          "jee_main_cutoff_percentile": 72,
+          "mht_cet_cutoff_percentile": 82
+        },
+        "fees": {
+          "total_fees": 670000,
+          "hostel_fees": 0,
+          "other_fees": 30000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 48,
+          "students_placed": 30,
+          "placement_percentage": 58,
+          "companies_visited": 35,
+          "total_offers": 48,
+          "offers_accepted": 28,
+          "avg_package": 450000,
+          "median_package": 370000,
+          "highest_package": 3500000,
+          "top_roles": [
+            "Design Engineer",
+            "Manufacturing Engineer",
+            "Production Manager"
+          ],
+          "top_companies": [
+            "Tata Motors",
+            "Mahindra",
+            "L&T",
+            "Forbes Marshall"
+          ]
+        },
+        "career_paths": [
+          "Design Engineer",
+          "Manufacturing",
+          "Automobile"
+        ],
+        "tags": [
+          "core_engineering",
+          "mumbai_city"
+        ]
+      },
+      {
+        "course_id": "KJSCE_MBA",
+        "degree": "MBA",
+        "branch": "Management",
+        "duration_years": 2,
+        "seat_intake": 120,
+        "difficulty": "high",
+        "cutoffs": {
+          "OPEN_PERCENTAGE": 50,
+          "OBC_PERCENTAGE": 45,
+          "SC_PERCENTAGE": 40
+        },
+        "eligibility": {
+          "exam": "MAH-CET / CAT / CMAT",
+          "min_percentage": 50,
+          "cat_percentile": 80,
+          "mah_cet_percentile": 85
+        },
+        "fees": {
+          "total_fees": 700000,
+          "hostel_fees": 0,
+          "other_fees": 35000
+        },
+        "placements": {
+          "registered_students": 118,
+          "participating_students": 110,
+          "students_placed": 88,
+          "placement_percentage": 78,
+          "companies_visited": 50,
+          "total_offers": 130,
+          "offers_accepted": 85,
+          "avg_package": 700000,
+          "median_package": 560000,
+          "highest_package": 2800000,
+          "top_roles": [
+            "Business Analyst",
+            "Marketing Manager",
+            "Finance Analyst",
+            "HR Manager"
+          ],
+          "top_companies": [
+            "Deloitte",
+            "EY",
+            "HDFC Bank",
+            "ICICI Bank",
+            "Amazon"
+          ]
+        },
+        "career_paths": [
+          "Business Analyst",
+          "Marketing",
+          "Finance",
+          "HR",
+          "Consulting"
+        ],
+        "tags": [
+          "management",
+          "mumbai_city",
+          "autonomous"
+        ]
+      },
+      {
+        "course_id": "KJSCE_BCOM",
+        "degree": "B.Com",
+        "branch": "Commerce",
+        "duration_years": 3,
+        "seat_intake": 240,
+        "difficulty": "medium",
+        "cutoffs": {
+          "OPEN_PERCENTAGE": 65,
+          "OBC_PERCENTAGE": 60,
+          "SC_PERCENTAGE": 50
+        },
+        "eligibility": {
+          "exam": "Merit / HSC Percentage",
+          "min_percentage": 60
+        },
+        "fees": {
+          "total_fees": 180000,
+          "hostel_fees": 0,
+          "other_fees": 12000
+        },
+        "placements": {
+          "registered_students": 230,
+          "participating_students": 190,
+          "students_placed": 130,
+          "placement_percentage": 65,
+          "companies_visited": 50,
+          "total_offers": 180,
+          "offers_accepted": 125,
+          "avg_package": 380000,
+          "median_package": 300000,
+          "highest_package": 1800000,
+          "top_roles": [
+            "Accountant",
+            "Finance Analyst",
+            "Audit Associate",
+            "Tax Consultant"
+          ],
+          "top_companies": [
+            "Deloitte",
+            "KPMG",
+            "EY",
+            "HDFC Bank",
+            "Axis Bank"
+          ]
+        },
+        "career_paths": [
+          "CA",
+          "Financial Analyst",
+          "Banking",
+          "MBA (Further Studies)"
+        ],
+        "tags": [
+          "commerce",
+          "affordable",
+          "mumbai_city"
+        ]
+      },
+      {
+        "course_id": "KJSCE_BARCH",
+        "degree": "B.Arch",
+        "branch": "Architecture",
+        "duration_years": 5,
+        "seat_intake": 40,
+        "difficulty": "high",
+        "cutoffs": {
+          "NATA_SCORE": 110,
+          "OBC_NATA": 100,
+          "SC_NATA": 85
+        },
+        "eligibility": {
+          "exam": "NATA / JEE Paper 2",
+          "min_percentage": 50,
+          "nata_cutoff_score": 110,
+          "jee_paper2_percentile": 72
+        },
+        "fees": {
+          "total_fees": 800000,
+          "hostel_fees": 0,
+          "other_fees": 35000
+        },
+        "placements": {
+          "registered_students": 38,
+          "participating_students": 33,
+          "students_placed": 24,
+          "placement_percentage": 68,
+          "companies_visited": 28,
+          "total_offers": 38,
+          "offers_accepted": 23,
+          "avg_package": 450000,
+          "median_package": 370000,
+          "highest_package": 2500000,
+          "top_roles": [
+            "Architect",
+            "Urban Designer",
+            "Interior Designer",
+            "Project Coordinator"
+          ],
+          "top_companies": [
+            "MMRDA",
+            "CIDCO",
+            "Godrej Properties",
+            "Oberoi Realty",
+            "Local Firms"
+          ]
+        },
+        "career_paths": [
+          "Architect",
+          "Urban Planner",
+          "Interior Designer",
+          "Real Estate Consultant"
+        ],
+        "tags": [
+          "architecture",
+          "mumbai_city"
+        ]
+      },
+      {
+        "course_id": "KJSCE_BSC_CS",
+        "degree": "B.Sc",
+        "branch": "Computer Science",
+        "duration_years": 3,
+        "seat_intake": 120,
+        "difficulty": "medium",
+        "cutoffs": {
+          "OPEN_PERCENTAGE": 55,
+          "OBC_PERCENTAGE": 50,
+          "SC_PERCENTAGE": 45
+        },
+        "eligibility": {
+          "exam": "Merit / HSC Percentage",
+          "min_percentage": 50
+        },
+        "fees": {
+          "total_fees": 130000,
+          "hostel_fees": 0,
+          "other_fees": 9000
+        },
+        "placements": {
+          "registered_students": 115,
+          "participating_students": 90,
+          "students_placed": 58,
+          "placement_percentage": 60,
+          "companies_visited": 30,
+          "total_offers": 80,
+          "offers_accepted": 55,
+          "avg_package": 320000,
+          "median_package": 270000,
+          "highest_package": 1800000,
+          "top_roles": [
+            "Junior Developer",
+            "Data Analyst",
+            "Tech Support"
+          ],
+          "top_companies": [
+            "TCS BPS",
+            "Wipro",
+            "Infosys BPO",
+            "Local IT Firms"
+          ]
+        },
+        "career_paths": [
+          "Software Developer",
+          "Data Analyst",
+          "MCA / M.Sc (Further Studies)"
+        ],
+        "tags": [
+          "affordable",
+          "science",
+          "mumbai_city"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SARDAR_PATEL_ENGG",
+    "college_name": "Sardar Patel College of Engineering",
+    "city": "Andheri, Mumbai",
+    "state": "Maharashtra",
+    "type": "private_autonomous",
+    "overall_rating": 7.5,
+    "scores": {
+      "placement": 7.5,
+      "research": 6.8,
+      "campus": 7.5,
+      "faculty": 7.3,
+      "infrastructure": 7.5
+    },
+    "roi": {
+      "roi_score": 7.5,
+      "payback_years": 4
+    },
+    "facilities": [
+      "Library",
+      "Labs",
+      "WiFi Campus",
+      "Canteen",
+      "Sports Facilities"
+    ],
+    "courses": [
+      {
+        "course_id": "SPCE_CS_BTECH",
+        "degree": "B.E.",
+        "branch": "Computer Engineering",
+        "duration_years": 4,
+        "seat_intake": 120,
+        "difficulty": "medium",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 90,
+          "JEE_MAIN_PERCENTILE": 80,
+          "OBC": 85,
+          "SC": 74
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 50,
+          "jee_main_cutoff_percentile": 80,
+          "mht_cet_cutoff_percentile": 90
+        },
+        "fees": {
+          "total_fees": 720000,
+          "hostel_fees": 0,
+          "other_fees": 28000
+        },
+        "placements": {
+          "registered_students": 115,
+          "participating_students": 100,
+          "students_placed": 77,
+          "placement_percentage": 72,
+          "companies_visited": 70,
+          "total_offers": 120,
+          "offers_accepted": 74,
+          "avg_package": 700000,
+          "median_package": 570000,
+          "highest_package": 8000000,
+          "top_roles": [
+            "Software Engineer",
+            "Data Analyst",
+            "Web Developer"
+          ],
+          "top_companies": [
+            "TCS",
+            "Infosys",
+            "Wipro",
+            "Accenture",
+            "Capgemini"
+          ]
+        },
+        "career_paths": [
+          "Software Engineer",
+          "Data Analyst",
+          "Web Developer"
+        ],
+        "tags": [
+          "autonomous",
+          "mumbai_city"
+        ]
+      },
+      {
+        "course_id": "SPCE_MECH_BTECH",
+        "degree": "B.E.",
+        "branch": "Mechanical Engineering",
+        "duration_years": 4,
+        "seat_intake": 60,
+        "difficulty": "medium",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 80,
+          "JEE_MAIN_PERCENTILE": 70,
+          "OBC": 75,
+          "SC": 63
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 50,
+          "jee_main_cutoff_percentile": 70,
+          "mht_cet_cutoff_percentile": 80
+        },
+        "fees": {
+          "total_fees": 680000,
+          "hostel_fees": 0,
+          "other_fees": 28000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 46,
+          "students_placed": 28,
+          "placement_percentage": 56,
+          "companies_visited": 30,
+          "total_offers": 42,
+          "offers_accepted": 26,
+          "avg_package": 400000,
+          "median_package": 330000,
+          "highest_package": 3000000,
+          "top_roles": [
+            "Design Engineer",
+            "Production Engineer",
+            "Quality Engineer"
+          ],
+          "top_companies": [
+            "Tata Motors",
+            "L&T",
+            "Godrej",
+            "Siemens"
+          ]
+        },
+        "career_paths": [
+          "Design Engineer",
+          "Production",
+          "Quality Control"
+        ],
+        "tags": [
+          "core_engineering",
+          "mumbai_city"
+        ]
+      },
+      {
+        "course_id": "SPCE_CIVIL_BTECH",
+        "degree": "B.E.",
+        "branch": "Civil Engineering",
+        "duration_years": 4,
+        "seat_intake": 60,
+        "difficulty": "low",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 70,
+          "JEE_MAIN_PERCENTILE": 60,
+          "OBC": 65,
+          "SC": 52
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 50,
+          "jee_main_cutoff_percentile": 60,
+          "mht_cet_cutoff_percentile": 70
+        },
+        "fees": {
+          "total_fees": 650000,
+          "hostel_fees": 0,
+          "other_fees": 28000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 44,
+          "students_placed": 24,
+          "placement_percentage": 50,
+          "companies_visited": 22,
+          "total_offers": 35,
+          "offers_accepted": 22,
+          "avg_package": 320000,
+          "median_package": 270000,
+          "highest_package": 2200000,
+          "top_roles": [
+            "Site Engineer",
+            "Structural Engineer",
+            "Project Coordinator"
+          ],
+          "top_companies": [
+            "Shapoorji Pallonji",
+            "L&T Construction",
+            "MMRDA",
+            "Gammon India"
+          ]
+        },
+        "career_paths": [
+          "Site Engineer",
+          "Structural Engineer",
+          "Project Manager"
+        ],
+        "tags": [
+          "core_engineering",
+          "mumbai_city"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "THADOMAL_SHAHANI",
+    "college_name": "Thadomal Shahani Engineering College",
+    "city": "Bandra, Mumbai",
+    "state": "Maharashtra",
+    "type": "private_autonomous",
+    "overall_rating": 7.6,
+    "scores": {
+      "placement": 7.6,
+      "research": 6.8,
+      "campus": 7.5,
+      "faculty": 7.5,
+      "infrastructure": 7.6
+    },
+    "roi": {
+      "roi_score": 7.7,
+      "payback_years": 4
+    },
+    "facilities": [
+      "Library",
+      "Labs",
+      "WiFi Campus",
+      "Canteen",
+      "Sports Facilities"
+    ],
+    "courses": [
+      {
+        "course_id": "TSEC_CS_BTECH",
+        "degree": "B.E.",
+        "branch": "Computer Engineering",
+        "duration_years": 4,
+        "seat_intake": 120,
+        "difficulty": "medium",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 91,
+          "JEE_MAIN_PERCENTILE": 81,
+          "OBC": 86,
+          "SC": 75
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 50,
+          "jee_main_cutoff_percentile": 81,
+          "mht_cet_cutoff_percentile": 91
+        },
+        "fees": {
+          "total_fees": 710000,
+          "hostel_fees": 0,
+          "other_fees": 27000
+        },
+        "placements": {
+          "registered_students": 115,
+          "participating_students": 104,
+          "students_placed": 80,
+          "placement_percentage": 74,
+          "companies_visited": 78,
+          "total_offers": 130,
+          "offers_accepted": 77,
+          "avg_package": 750000,
+          "median_package": 610000,
+          "highest_package": 8500000,
+          "top_roles": [
+            "Software Engineer",
+            "Data Analyst",
+            "Web Developer",
+            "ML Engineer"
+          ],
+          "top_companies": [
+            "TCS",
+            "Infosys",
+            "Accenture",
+            "Wipro",
+            "Amazon"
+          ]
+        },
+        "career_paths": [
+          "Software Engineer",
+          "Data Analyst",
+          "Web Developer"
+        ],
+        "tags": [
+          "autonomous",
+          "mumbai_city",
+          "bandra"
+        ]
+      },
+      {
+        "course_id": "TSEC_IT_BTECH",
+        "degree": "B.E.",
+        "branch": "Information Technology",
+        "duration_years": 4,
+        "seat_intake": 60,
+        "difficulty": "medium",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 88,
+          "JEE_MAIN_PERCENTILE": 78,
+          "OBC": 83,
+          "SC": 72
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 50,
+          "jee_main_cutoff_percentile": 78,
+          "mht_cet_cutoff_percentile": 88
+        },
+        "fees": {
+          "total_fees": 690000,
+          "hostel_fees": 0,
+          "other_fees": 27000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 51,
+          "students_placed": 38,
+          "placement_percentage": 72,
+          "companies_visited": 60,
+          "total_offers": 75,
+          "offers_accepted": 36,
+          "avg_package": 700000,
+          "median_package": 570000,
+          "highest_package": 7000000,
+          "top_roles": [
+            "Software Developer",
+            "IT Analyst",
+            "System Engineer"
+          ],
+          "top_companies": [
+            "TCS",
+            "Wipro",
+            "Capgemini",
+            "IBM"
+          ]
+        },
+        "career_paths": [
+          "Software Engineer",
+          "IT Analyst",
+          "System Engineer"
+        ],
+        "tags": [
+          "autonomous",
+          "mumbai_city"
+        ]
+      },
+      {
+        "course_id": "TSEC_EXTC_BTECH",
+        "degree": "B.E.",
+        "branch": "Electronics & Telecommunication",
+        "duration_years": 4,
+        "seat_intake": 60,
+        "difficulty": "medium",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 85,
+          "JEE_MAIN_PERCENTILE": 75,
+          "OBC": 80,
+          "SC": 68
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 50,
+          "jee_main_cutoff_percentile": 75,
+          "mht_cet_cutoff_percentile": 85
+        },
+        "fees": {
+          "total_fees": 680000,
+          "hostel_fees": 0,
+          "other_fees": 27000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 48,
+          "students_placed": 32,
+          "placement_percentage": 64,
+          "companies_visited": 45,
+          "total_offers": 55,
+          "offers_accepted": 30,
+          "avg_package": 580000,
+          "median_package": 470000,
+          "highest_package": 5500000,
+          "top_roles": [
+            "Embedded Engineer",
+            "Telecom Engineer",
+            "Software Engineer"
+          ],
+          "top_companies": [
+            "L&T Tech",
+            "Wipro",
+            "HCL",
+            "Samsung"
+          ]
+        },
+        "career_paths": [
+          "Embedded Engineer",
+          "Telecom Engineer",
+          "Software Engineer"
+        ],
+        "tags": [
+          "autonomous",
+          "mumbai_city"
+        ]
+      },
+      {
+        "course_id": "TSEC_MBA",
+        "degree": "MBA",
+        "branch": "Management",
+        "duration_years": 2,
+        "seat_intake": 60,
+        "difficulty": "medium",
+        "cutoffs": {
+          "OPEN_PERCENTAGE": 50,
+          "OBC_PERCENTAGE": 45,
+          "SC_PERCENTAGE": 40
+        },
+        "eligibility": {
+          "exam": "MAH-CET / CAT / CMAT",
+          "min_percentage": 50,
+          "cat_percentile": 72,
+          "mah_cet_percentile": 78
+        },
+        "fees": {
+          "total_fees": 620000,
+          "hostel_fees": 0,
+          "other_fees": 28000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 52,
+          "students_placed": 38,
+          "placement_percentage": 70,
+          "companies_visited": 35,
+          "total_offers": 58,
+          "offers_accepted": 36,
+          "avg_package": 530000,
+          "median_package": 430000,
+          "highest_package": 2000000,
+          "top_roles": [
+            "Business Analyst",
+            "Marketing Executive",
+            "Finance Analyst",
+            "HR Executive"
+          ],
+          "top_companies": [
+            "HDFC",
+            "ICICI",
+            "Axis Bank",
+            "Deloitte",
+            "TCS"
+          ]
+        },
+        "career_paths": [
+          "Business Analyst",
+          "Marketing",
+          "Finance",
+          "HR"
+        ],
+        "tags": [
+          "management",
+          "mumbai_city"
+        ]
+      },
+      {
+        "course_id": "TSEC_BCOM",
+        "degree": "B.Com",
+        "branch": "Commerce",
+        "duration_years": 3,
+        "seat_intake": 120,
+        "difficulty": "medium",
+        "cutoffs": {
+          "OPEN_PERCENTAGE": 60,
+          "OBC_PERCENTAGE": 55,
+          "SC_PERCENTAGE": 48
+        },
+        "eligibility": {
+          "exam": "Merit / HSC Percentage",
+          "min_percentage": 55
+        },
+        "fees": {
+          "total_fees": 160000,
+          "hostel_fees": 0,
+          "other_fees": 10000
+        },
+        "placements": {
+          "registered_students": 115,
+          "participating_students": 88,
+          "students_placed": 58,
+          "placement_percentage": 62,
+          "companies_visited": 32,
+          "total_offers": 80,
+          "offers_accepted": 55,
+          "avg_package": 350000,
+          "median_package": 285000,
+          "highest_package": 1600000,
+          "top_roles": [
+            "Accountant",
+            "Finance Analyst",
+            "Banking Executive",
+            "Tax Consultant"
+          ],
+          "top_companies": [
+            "HDFC Bank",
+            "ICICI Bank",
+            "EY",
+            "KPMG",
+            "Local CA Firms"
+          ]
+        },
+        "career_paths": [
+          "CA",
+          "Financial Analyst",
+          "Banking",
+          "MBA (Further Studies)"
+        ],
+        "tags": [
+          "commerce",
+          "affordable",
+          "mumbai_city"
+        ]
+      },
+      {
+        "course_id": "TSEC_BARCH",
+        "degree": "B.Arch",
+        "branch": "Architecture",
+        "duration_years": 5,
+        "seat_intake": 40,
+        "difficulty": "medium",
+        "cutoffs": {
+          "NATA_SCORE": 95,
+          "OBC_NATA": 85,
+          "SC_NATA": 75
+        },
+        "eligibility": {
+          "exam": "NATA / JEE Paper 2",
+          "min_percentage": 50,
+          "nata_cutoff_score": 95,
+          "jee_paper2_percentile": 65
+        },
+        "fees": {
+          "total_fees": 760000,
+          "hostel_fees": 0,
+          "other_fees": 30000
+        },
+        "placements": {
+          "registered_students": 38,
+          "participating_students": 31,
+          "students_placed": 20,
+          "placement_percentage": 60,
+          "companies_visited": 22,
+          "total_offers": 32,
+          "offers_accepted": 19,
+          "avg_package": 420000,
+          "median_package": 350000,
+          "highest_package": 2200000,
+          "top_roles": [
+            "Architect",
+            "Urban Planner",
+            "Interior Designer",
+            "Site Supervisor"
+          ],
+          "top_companies": [
+            "MMRDA",
+            "CIDCO",
+            "Godrej Properties",
+            "Local Architecture Firms"
+          ]
+        },
+        "career_paths": [
+          "Architect",
+          "Urban Planner",
+          "Interior Designer",
+          "Real Estate Consultant"
+        ],
+        "tags": [
+          "architecture",
+          "mumbai_city",
+          "bandra"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "VIVEKANAND_ENGG",
+    "college_name": "Vivekanand Education Society's Institute of Technology",
+    "city": "Chembur, Mumbai",
+    "state": "Maharashtra",
+    "type": "private_autonomous",
+    "overall_rating": 7.7,
+    "scores": {
+      "placement": 7.7,
+      "research": 6.8,
+      "campus": 7.5,
+      "faculty": 7.6,
+      "infrastructure": 7.8
+    },
+    "roi": {
+      "roi_score": 7.8,
+      "payback_years": 4
+    },
+    "facilities": [
+      "Library",
+      "Labs",
+      "WiFi Campus",
+      "Canteen",
+      "Sports Complex",
+      "Auditorium"
+    ],
+    "courses": [
+      {
+        "course_id": "VESIT_CS_BTECH",
+        "degree": "B.E.",
+        "branch": "Computer Engineering",
+        "duration_years": 4,
+        "seat_intake": 120,
+        "difficulty": "medium",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 92,
+          "JEE_MAIN_PERCENTILE": 82,
+          "OBC": 87,
+          "SC": 76
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 50,
+          "jee_main_cutoff_percentile": 82,
+          "mht_cet_cutoff_percentile": 92
+        },
+        "fees": {
+          "total_fees": 730000,
+          "hostel_fees": 0,
+          "other_fees": 28000
+        },
+        "placements": {
+          "registered_students": 115,
+          "participating_students": 105,
+          "students_placed": 82,
+          "placement_percentage": 76,
+          "companies_visited": 80,
+          "total_offers": 135,
+          "offers_accepted": 79,
+          "avg_package": 780000,
+          "median_package": 630000,
+          "highest_package": 9000000,
+          "top_roles": [
+            "Software Engineer",
+            "Data Analyst",
+            "Web Developer",
+            "ML Engineer"
+          ],
+          "top_companies": [
+            "TCS",
+            "Infosys",
+            "Accenture",
+            "Capgemini",
+            "Amazon"
+          ]
+        },
+        "career_paths": [
+          "Software Engineer",
+          "Data Analyst",
+          "Product Manager"
+        ],
+        "tags": [
+          "autonomous",
+          "mumbai_city",
+          "chembur"
+        ]
+      },
+      {
+        "course_id": "VESIT_IT_BTECH",
+        "degree": "B.E.",
+        "branch": "Information Technology",
+        "duration_years": 4,
+        "seat_intake": 60,
+        "difficulty": "medium",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 89,
+          "JEE_MAIN_PERCENTILE": 79,
+          "OBC": 84,
+          "SC": 73
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 50,
+          "jee_main_cutoff_percentile": 79,
+          "mht_cet_cutoff_percentile": 89
+        },
+        "fees": {
+          "total_fees": 710000,
+          "hostel_fees": 0,
+          "other_fees": 28000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 52,
+          "students_placed": 39,
+          "placement_percentage": 74,
+          "companies_visited": 62,
+          "total_offers": 78,
+          "offers_accepted": 37,
+          "avg_package": 730000,
+          "median_package": 595000,
+          "highest_package": 7500000,
+          "top_roles": [
+            "Software Developer",
+            "IT Analyst",
+            "Network Engineer"
+          ],
+          "top_companies": [
+            "TCS",
+            "Wipro",
+            "HCL",
+            "IBM",
+            "Accenture"
+          ]
+        },
+        "career_paths": [
+          "Software Engineer",
+          "IT Analyst",
+          "Network Engineer"
+        ],
+        "tags": [
+          "autonomous",
+          "mumbai_city"
+        ]
+      },
+      {
+        "course_id": "VESIT_EXTC_BTECH",
+        "degree": "B.E.",
+        "branch": "Electronics & Telecommunication",
+        "duration_years": 4,
+        "seat_intake": 60,
+        "difficulty": "medium",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 86,
+          "JEE_MAIN_PERCENTILE": 76,
+          "OBC": 81,
+          "SC": 70
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 50,
+          "jee_main_cutoff_percentile": 76,
+          "mht_cet_cutoff_percentile": 86
+        },
+        "fees": {
+          "total_fees": 700000,
+          "hostel_fees": 0,
+          "other_fees": 28000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 49,
+          "students_placed": 33,
+          "placement_percentage": 64,
+          "companies_visited": 47,
+          "total_offers": 58,
+          "offers_accepted": 31,
+          "avg_package": 600000,
+          "median_package": 490000,
+          "highest_package": 5800000,
+          "top_roles": [
+            "Embedded Engineer",
+            "VLSI Engineer",
+            "Software Engineer"
+          ],
+          "top_companies": [
+            "Wipro",
+            "L&T",
+            "Tech Mahindra",
+            "Qualcomm"
+          ]
+        },
+        "career_paths": [
+          "Embedded Engineer",
+          "VLSI Designer",
+          "Software Engineer"
+        ],
+        "tags": [
+          "autonomous",
+          "mumbai_city"
+        ]
+      },
+      {
+        "course_id": "VESIT_MBA",
+        "degree": "MBA",
+        "branch": "Management",
+        "duration_years": 2,
+        "seat_intake": 60,
+        "difficulty": "medium",
+        "cutoffs": {
+          "OPEN_PERCENTAGE": 50,
+          "OBC_PERCENTAGE": 45,
+          "SC_PERCENTAGE": 40
+        },
+        "eligibility": {
+          "exam": "MAH-CET / CAT / CMAT",
+          "min_percentage": 50,
+          "cat_percentile": 75,
+          "mah_cet_percentile": 80
+        },
+        "fees": {
+          "total_fees": 620000,
+          "hostel_fees": 0,
+          "other_fees": 28000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 52,
+          "students_placed": 40,
+          "placement_percentage": 74,
+          "companies_visited": 36,
+          "total_offers": 60,
+          "offers_accepted": 38,
+          "avg_package": 560000,
+          "median_package": 455000,
+          "highest_package": 2100000,
+          "top_roles": [
+            "Business Analyst",
+            "Marketing Manager",
+            "HR Manager",
+            "Finance Analyst"
+          ],
+          "top_companies": [
+            "HDFC Bank",
+            "ICICI Bank",
+            "Axis Bank",
+            "Deloitte",
+            "TCS"
+          ]
+        },
+        "career_paths": [
+          "Business Analyst",
+          "Marketing",
+          "Finance",
+          "HR"
+        ],
+        "tags": [
+          "management",
+          "mumbai_city"
+        ]
+      },
+      {
+        "course_id": "VESIT_BSC_IT",
+        "degree": "B.Sc",
+        "branch": "Information Technology",
+        "duration_years": 3,
+        "seat_intake": 60,
+        "difficulty": "low",
+        "cutoffs": {
+          "OPEN_PERCENTAGE": 50,
+          "OBC_PERCENTAGE": 45,
+          "SC_PERCENTAGE": 40
+        },
+        "eligibility": {
+          "exam": "Merit / HSC Percentage",
+          "min_percentage": 50
+        },
+        "fees": {
+          "total_fees": 115000,
+          "hostel_fees": 0,
+          "other_fees": 7500
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 44,
+          "students_placed": 25,
+          "placement_percentage": 52,
+          "companies_visited": 20,
+          "total_offers": 36,
+          "offers_accepted": 24,
+          "avg_package": 280000,
+          "median_package": 235000,
+          "highest_package": 1300000,
+          "top_roles": [
+            "Junior Developer",
+            "Tech Support",
+            "Data Analyst"
+          ],
+          "top_companies": [
+            "TCS BPS",
+            "Wipro",
+            "Local IT Companies"
+          ]
+        },
+        "career_paths": [
+          "Software Developer",
+          "Data Analyst",
+          "MCA / M.Sc (Further Studies)"
+        ],
+        "tags": [
+          "affordable",
+          "science",
+          "mumbai_city"
+        ]
+      },
+      {
+        "course_id": "VESIT_BCOM",
+        "degree": "B.Com",
+        "branch": "Commerce",
+        "duration_years": 3,
+        "seat_intake": 120,
+        "difficulty": "medium",
+        "cutoffs": {
+          "OPEN_PERCENTAGE": 60,
+          "OBC_PERCENTAGE": 55,
+          "SC_PERCENTAGE": 48
+        },
+        "eligibility": {
+          "exam": "Merit / HSC Percentage",
+          "min_percentage": 55
+        },
+        "fees": {
+          "total_fees": 140000,
+          "hostel_fees": 0,
+          "other_fees": 9500
+        },
+        "placements": {
+          "registered_students": 115,
+          "participating_students": 90,
+          "students_placed": 58,
+          "placement_percentage": 61,
+          "companies_visited": 32,
+          "total_offers": 80,
+          "offers_accepted": 55,
+          "avg_package": 340000,
+          "median_package": 280000,
+          "highest_package": 1500000,
+          "top_roles": [
+            "Accountant",
+            "Finance Analyst",
+            "Banking Executive",
+            "Audit Associate"
+          ],
+          "top_companies": [
+            "HDFC Bank",
+            "ICICI Bank",
+            "EY",
+            "KPMG",
+            "Deloitte"
+          ]
+        },
+        "career_paths": [
+          "CA",
+          "Financial Analyst",
+          "Banking",
+          "MBA (Further Studies)"
+        ],
+        "tags": [
+          "commerce",
+          "affordable",
+          "mumbai_city"
+        ]
+      },
+      {
+        "course_id": "VESIT_BARCH",
+        "degree": "B.Arch",
+        "branch": "Architecture",
+        "duration_years": 5,
+        "seat_intake": 40,
+        "difficulty": "medium",
+        "cutoffs": {
+          "NATA_SCORE": 100,
+          "OBC_NATA": 88,
+          "SC_NATA": 78
+        },
+        "eligibility": {
+          "exam": "NATA / JEE Paper 2",
+          "min_percentage": 50,
+          "nata_cutoff_score": 100,
+          "jee_paper2_percentile": 68
+        },
+        "fees": {
+          "total_fees": 770000,
+          "hostel_fees": 0,
+          "other_fees": 30000
+        },
+        "placements": {
+          "registered_students": 38,
+          "participating_students": 32,
+          "students_placed": 21,
+          "placement_percentage": 63,
+          "companies_visited": 24,
+          "total_offers": 34,
+          "offers_accepted": 20,
+          "avg_package": 430000,
+          "median_package": 360000,
+          "highest_package": 2300000,
+          "top_roles": [
+            "Architect",
+            "Urban Designer",
+            "Interior Designer",
+            "Project Coordinator"
+          ],
+          "top_companies": [
+            "CIDCO",
+            "MMRDA",
+            "Godrej Properties",
+            "Local Architecture Firms"
+          ]
+        },
+        "career_paths": [
+          "Architect",
+          "Urban Planner",
+          "Interior Designer",
+          "Real Estate Consultant"
+        ],
+        "tags": [
+          "architecture",
+          "mumbai_city",
+          "chembur"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "FRCRCE_BANDRA",
+    "college_name": "Fr. Conceicao Rodrigues College of Engineering",
+    "city": "Bandra, Mumbai",
+    "state": "Maharashtra",
+    "type": "private_autonomous",
+    "overall_rating": 7.8,
+    "scores": {
+      "placement": 7.8,
+      "research": 7.0,
+      "campus": 7.8,
+      "faculty": 7.7,
+      "infrastructure": 7.8
+    },
+    "roi": {
+      "roi_score": 7.9,
+      "payback_years": 3
+    },
+    "facilities": [
+      "Library",
+      "Labs",
+      "WiFi Campus",
+      "Canteen",
+      "Sports Complex"
+    ],
+    "courses": [
+      {
+        "course_id": "FRCRCE_CS_BTECH",
+        "degree": "B.E.",
+        "branch": "Computer Engineering",
+        "duration_years": 4,
+        "seat_intake": 120,
+        "difficulty": "medium",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 92,
+          "JEE_MAIN_PERCENTILE": 82,
+          "OBC": 87,
+          "SC": 76
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 50,
+          "jee_main_cutoff_percentile": 82,
+          "mht_cet_cutoff_percentile": 92
+        },
+        "fees": {
+          "total_fees": 720000,
+          "hostel_fees": 0,
+          "other_fees": 28000
+        },
+        "placements": {
+          "registered_students": 115,
+          "participating_students": 106,
+          "students_placed": 83,
+          "placement_percentage": 76,
+          "companies_visited": 82,
+          "total_offers": 138,
+          "offers_accepted": 80,
+          "avg_package": 770000,
+          "median_package": 625000,
+          "highest_package": 9500000,
+          "top_roles": [
+            "Software Engineer",
+            "Data Analyst",
+            "Web Developer"
+          ],
+          "top_companies": [
+            "TCS",
+            "Infosys",
+            "Accenture",
+            "Capgemini",
+            "Amazon"
+          ]
+        },
+        "career_paths": [
+          "Software Engineer",
+          "Data Analyst",
+          "Web Developer"
+        ],
+        "tags": [
+          "autonomous",
+          "mumbai_city",
+          "minority_institution"
+        ]
+      },
+      {
+        "course_id": "FRCRCE_IT_BTECH",
+        "degree": "B.E.",
+        "branch": "Information Technology",
+        "duration_years": 4,
+        "seat_intake": 60,
+        "difficulty": "medium",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 89,
+          "JEE_MAIN_PERCENTILE": 79,
+          "OBC": 84,
+          "SC": 73
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 50,
+          "jee_main_cutoff_percentile": 79,
+          "mht_cet_cutoff_percentile": 89
+        },
+        "fees": {
+          "total_fees": 700000,
+          "hostel_fees": 0,
+          "other_fees": 28000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 52,
+          "students_placed": 39,
+          "placement_percentage": 74,
+          "companies_visited": 60,
+          "total_offers": 76,
+          "offers_accepted": 37,
+          "avg_package": 720000,
+          "median_package": 585000,
+          "highest_package": 7000000,
+          "top_roles": [
+            "Software Developer",
+            "IT Analyst",
+            "Web Developer"
+          ],
+          "top_companies": [
+            "TCS",
+            "Wipro",
+            "HCL",
+            "Capgemini"
+          ]
+        },
+        "career_paths": [
+          "Software Engineer",
+          "IT Analyst",
+          "Web Developer"
+        ],
+        "tags": [
+          "autonomous",
+          "mumbai_city"
+        ]
+      },
+      {
+        "course_id": "FRCRCE_EXTC_BTECH",
+        "degree": "B.E.",
+        "branch": "Electronics & Telecommunication",
+        "duration_years": 4,
+        "seat_intake": 60,
+        "difficulty": "medium",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 86,
+          "JEE_MAIN_PERCENTILE": 76,
+          "OBC": 81,
+          "SC": 70
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 50,
+          "jee_main_cutoff_percentile": 76,
+          "mht_cet_cutoff_percentile": 86
+        },
+        "fees": {
+          "total_fees": 690000,
+          "hostel_fees": 0,
+          "other_fees": 28000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 48,
+          "students_placed": 32,
+          "placement_percentage": 62,
+          "companies_visited": 45,
+          "total_offers": 55,
+          "offers_accepted": 30,
+          "avg_package": 590000,
+          "median_package": 480000,
+          "highest_package": 5500000,
+          "top_roles": [
+            "Embedded Engineer",
+            "Network Engineer",
+            "Software Engineer"
+          ],
+          "top_companies": [
+            "L&T Tech",
+            "Wipro",
+            "HCL",
+            "Siemens"
+          ]
+        },
+        "career_paths": [
+          "Embedded Engineer",
+          "Network Engineer",
+          "Software Engineer"
+        ],
+        "tags": [
+          "autonomous",
+          "mumbai_city"
+        ]
+      },
+      {
+        "course_id": "FRCRCE_MECH_BTECH",
+        "degree": "B.E.",
+        "branch": "Mechanical Engineering",
+        "duration_years": 4,
+        "seat_intake": 60,
+        "difficulty": "medium",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 80,
+          "JEE_MAIN_PERCENTILE": 70,
+          "OBC": 75,
+          "SC": 63
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 50,
+          "jee_main_cutoff_percentile": 70,
+          "mht_cet_cutoff_percentile": 80
+        },
+        "fees": {
+          "total_fees": 670000,
+          "hostel_fees": 0,
+          "other_fees": 28000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 47,
+          "students_placed": 28,
+          "placement_percentage": 56,
+          "companies_visited": 32,
+          "total_offers": 45,
+          "offers_accepted": 26,
+          "avg_package": 430000,
+          "median_package": 350000,
+          "highest_package": 3200000,
+          "top_roles": [
+            "Design Engineer",
+            "Manufacturing Engineer",
+            "Quality Engineer"
+          ],
+          "top_companies": [
+            "Tata Motors",
+            "Mahindra",
+            "L&T",
+            "Godrej"
+          ]
+        },
+        "career_paths": [
+          "Design Engineer",
+          "Manufacturing",
+          "R&D"
+        ],
+        "tags": [
+          "core_engineering",
+          "mumbai_city"
+        ]
+      },
+      {
+        "course_id": "FRCRCE_MBA",
+        "degree": "MBA",
+        "branch": "Management",
+        "duration_years": 2,
+        "seat_intake": 60,
+        "difficulty": "medium",
+        "cutoffs": {
+          "OPEN_PERCENTAGE": 50,
+          "OBC_PERCENTAGE": 45,
+          "SC_PERCENTAGE": 40
+        },
+        "eligibility": {
+          "exam": "MAH-CET / CAT / CMAT",
+          "min_percentage": 50,
+          "cat_percentile": 75,
+          "mah_cet_percentile": 80
+        },
+        "fees": {
+          "total_fees": 620000,
+          "hostel_fees": 0,
+          "other_fees": 30000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 52,
+          "students_placed": 40,
+          "placement_percentage": 74,
+          "companies_visited": 38,
+          "total_offers": 62,
+          "offers_accepted": 38,
+          "avg_package": 580000,
+          "median_package": 470000,
+          "highest_package": 2200000,
+          "top_roles": [
+            "Business Analyst",
+            "Marketing Manager",
+            "HR Executive",
+            "Finance Analyst"
+          ],
+          "top_companies": [
+            "HDFC",
+            "ICICI",
+            "Axis Bank",
+            "Deloitte",
+            "Local Companies"
+          ]
+        },
+        "career_paths": [
+          "Business Analyst",
+          "Marketing",
+          "Finance",
+          "HR"
+        ],
+        "tags": [
+          "management",
+          "mumbai_city",
+          "minority_institution"
+        ]
+      },
+      {
+        "course_id": "FRCRCE_BSC_CS",
+        "degree": "B.Sc",
+        "branch": "Computer Science",
+        "duration_years": 3,
+        "seat_intake": 60,
+        "difficulty": "low",
+        "cutoffs": {
+          "OPEN_PERCENTAGE": 50,
+          "OBC_PERCENTAGE": 45,
+          "SC_PERCENTAGE": 40
+        },
+        "eligibility": {
+          "exam": "Merit / HSC Percentage",
+          "min_percentage": 50
+        },
+        "fees": {
+          "total_fees": 110000,
+          "hostel_fees": 0,
+          "other_fees": 8000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 44,
+          "students_placed": 25,
+          "placement_percentage": 53,
+          "companies_visited": 20,
+          "total_offers": 36,
+          "offers_accepted": 23,
+          "avg_package": 290000,
+          "median_package": 245000,
+          "highest_package": 1400000,
+          "top_roles": [
+            "Junior Developer",
+            "Data Entry Analyst",
+            "Tech Support"
+          ],
+          "top_companies": [
+            "TCS BPS",
+            "Wipro",
+            "Local IT Firms"
+          ]
+        },
+        "career_paths": [
+          "Software Developer",
+          "Data Analyst",
+          "MCA / M.Sc (Further Studies)"
+        ],
+        "tags": [
+          "affordable",
+          "science",
+          "mumbai_city"
+        ]
+      },
+      {
+        "course_id": "FRCRCE_BCOM",
+        "degree": "B.Com",
+        "branch": "Commerce",
+        "duration_years": 3,
+        "seat_intake": 120,
+        "difficulty": "low",
+        "cutoffs": {
+          "OPEN_PERCENTAGE": 55,
+          "OBC_PERCENTAGE": 50,
+          "SC_PERCENTAGE": 44
+        },
+        "eligibility": {
+          "exam": "Merit / HSC Percentage",
+          "min_percentage": 50
+        },
+        "fees": {
+          "total_fees": 130000,
+          "hostel_fees": 0,
+          "other_fees": 9000
+        },
+        "placements": {
+          "registered_students": 115,
+          "participating_students": 88,
+          "students_placed": 55,
+          "placement_percentage": 58,
+          "companies_visited": 30,
+          "total_offers": 75,
+          "offers_accepted": 52,
+          "avg_package": 320000,
+          "median_package": 270000,
+          "highest_package": 1500000,
+          "top_roles": [
+            "Accountant",
+            "Finance Analyst",
+            "Tax Consultant",
+            "Banking Executive"
+          ],
+          "top_companies": [
+            "HDFC Bank",
+            "ICICI Bank",
+            "Deloitte",
+            "EY",
+            "Local CA Firms"
+          ]
+        },
+        "career_paths": [
+          "CA",
+          "Financial Analyst",
+          "Banking",
+          "MBA (Further Studies)"
+        ],
+        "tags": [
+          "commerce",
+          "affordable",
+          "mumbai_city"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "RIZVI_ENGG",
+    "college_name": "Rizvi College of Engineering",
+    "city": "Bandra, Mumbai",
+    "state": "Maharashtra",
+    "type": "private",
+    "overall_rating": 6.9,
+    "scores": {
+      "placement": 6.8,
+      "research": 6.0,
+      "campus": 7.0,
+      "faculty": 6.8,
+      "infrastructure": 7.0
+    },
+    "roi": {
+      "roi_score": 7.0,
+      "payback_years": 5
+    },
+    "facilities": [
+      "Library",
+      "Labs",
+      "WiFi Campus",
+      "Canteen"
+    ],
+    "courses": [
+      {
+        "course_id": "RIZVI_CS_BTECH",
+        "degree": "B.E.",
+        "branch": "Computer Engineering",
+        "duration_years": 4,
+        "seat_intake": 120,
+        "difficulty": "low",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 75,
+          "JEE_MAIN_PERCENTILE": 65,
+          "OBC": 70,
+          "SC": 55
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 45,
+          "jee_main_cutoff_percentile": 65,
+          "mht_cet_cutoff_percentile": 75
+        },
+        "fees": {
+          "total_fees": 650000,
+          "hostel_fees": 0,
+          "other_fees": 24000
+        },
+        "placements": {
+          "registered_students": 115,
+          "participating_students": 90,
+          "students_placed": 60,
+          "placement_percentage": 60,
+          "companies_visited": 45,
+          "total_offers": 85,
+          "offers_accepted": 57,
+          "avg_package": 480000,
+          "median_package": 390000,
+          "highest_package": 4500000,
+          "top_roles": [
+            "Junior Developer",
+            "Web Developer",
+            "System Analyst"
+          ],
+          "top_companies": [
+            "TCS",
+            "Wipro",
+            "Infosys",
+            "Local IT Firms"
+          ]
+        },
+        "career_paths": [
+          "Software Engineer",
+          "Web Developer",
+          "System Analyst"
+        ],
+        "tags": [
+          "mumbai_city",
+          "minority_institution"
+        ]
+      },
+      {
+        "course_id": "RIZVI_IT_BTECH",
+        "degree": "B.E.",
+        "branch": "Information Technology",
+        "duration_years": 4,
+        "seat_intake": 60,
+        "difficulty": "low",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 72,
+          "JEE_MAIN_PERCENTILE": 62,
+          "OBC": 67,
+          "SC": 52
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 45,
+          "jee_main_cutoff_percentile": 62,
+          "mht_cet_cutoff_percentile": 72
+        },
+        "fees": {
+          "total_fees": 630000,
+          "hostel_fees": 0,
+          "other_fees": 24000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 46,
+          "students_placed": 28,
+          "placement_percentage": 58,
+          "companies_visited": 32,
+          "total_offers": 50,
+          "offers_accepted": 26,
+          "avg_package": 440000,
+          "median_package": 360000,
+          "highest_package": 3500000,
+          "top_roles": [
+            "Software Developer",
+            "Network Analyst",
+            "System Admin"
+          ],
+          "top_companies": [
+            "TCS",
+            "Wipro",
+            "Local IT Companies"
+          ]
+        },
+        "career_paths": [
+          "Software Engineer",
+          "Network Admin",
+          "IT Support"
+        ],
+        "tags": [
+          "mumbai_city",
+          "minority_institution"
+        ]
+      },
+      {
+        "course_id": "RIZVI_EXTC_BTECH",
+        "degree": "B.E.",
+        "branch": "Electronics & Telecommunication",
+        "duration_years": 4,
+        "seat_intake": 60,
+        "difficulty": "low",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 68,
+          "JEE_MAIN_PERCENTILE": 58,
+          "OBC": 63,
+          "SC": 48
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 45,
+          "jee_main_cutoff_percentile": 58,
+          "mht_cet_cutoff_percentile": 68
+        },
+        "fees": {
+          "total_fees": 620000,
+          "hostel_fees": 0,
+          "other_fees": 24000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 43,
+          "students_placed": 24,
+          "placement_percentage": 52,
+          "companies_visited": 25,
+          "total_offers": 38,
+          "offers_accepted": 22,
+          "avg_package": 370000,
+          "median_package": 310000,
+          "highest_package": 2800000,
+          "top_roles": [
+            "Embedded Engineer",
+            "Telecom Engineer",
+            "Software Engineer"
+          ],
+          "top_companies": [
+            "Wipro",
+            "HCL",
+            "L&T",
+            "Local Electronics Firms"
+          ]
+        },
+        "career_paths": [
+          "Embedded Engineer",
+          "Telecom Engineer",
+          "Software Engineer"
+        ],
+        "tags": [
+          "mumbai_city",
+          "minority_institution"
+        ]
+      },
+      {
+        "course_id": "RIZVI_MBA",
+        "degree": "MBA",
+        "branch": "Management",
+        "duration_years": 2,
+        "seat_intake": 60,
+        "difficulty": "low",
+        "cutoffs": {
+          "OPEN_PERCENTAGE": 45,
+          "OBC_PERCENTAGE": 40,
+          "SC_PERCENTAGE": 35
+        },
+        "eligibility": {
+          "exam": "MAH-CET / CAT / CMAT",
+          "min_percentage": 45,
+          "cat_percentile": 60,
+          "mah_cet_percentile": 65
+        },
+        "fees": {
+          "total_fees": 500000,
+          "hostel_fees": 0,
+          "other_fees": 25000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 48,
+          "students_placed": 32,
+          "placement_percentage": 62,
+          "companies_visited": 28,
+          "total_offers": 46,
+          "offers_accepted": 30,
+          "avg_package": 380000,
+          "median_package": 310000,
+          "highest_package": 1500000,
+          "top_roles": [
+            "Business Analyst",
+            "Marketing Executive",
+            "HR Executive",
+            "Sales Manager"
+          ],
+          "top_companies": [
+            "HDFC Life",
+            "Bajaj Finance",
+            "Axis Bank",
+            "Local Companies"
+          ]
+        },
+        "career_paths": [
+          "Business Analyst",
+          "Marketing",
+          "Sales",
+          "Banking"
+        ],
+        "tags": [
+          "management",
+          "mumbai_city",
+          "minority_institution",
+          "affordable"
+        ]
+      },
+      {
+        "course_id": "RIZVI_BCOM",
+        "degree": "B.Com",
+        "branch": "Commerce",
+        "duration_years": 3,
+        "seat_intake": 240,
+        "difficulty": "low",
+        "cutoffs": {
+          "OPEN_PERCENTAGE": 50,
+          "OBC_PERCENTAGE": 45,
+          "SC_PERCENTAGE": 38
+        },
+        "eligibility": {
+          "exam": "Merit / HSC Percentage",
+          "min_percentage": 45
+        },
+        "fees": {
+          "total_fees": 120000,
+          "hostel_fees": 0,
+          "other_fees": 8000
+        },
+        "placements": {
+          "registered_students": 230,
+          "participating_students": 170,
+          "students_placed": 95,
+          "placement_percentage": 52,
+          "companies_visited": 25,
+          "total_offers": 120,
+          "offers_accepted": 90,
+          "avg_package": 280000,
+          "median_package": 240000,
+          "highest_package": 1200000,
+          "top_roles": [
+            "Accountant",
+            "Banking Executive",
+            "Finance Analyst",
+            "Tax Associate"
+          ],
+          "top_companies": [
+            "HDFC Bank",
+            "ICICI Bank",
+            "Axis Bank",
+            "Local CA Firms"
+          ]
+        },
+        "career_paths": [
+          "CA",
+          "Banking",
+          "Financial Analyst",
+          "MBA (Further Studies)"
+        ],
+        "tags": [
+          "commerce",
+          "affordable",
+          "mumbai_city",
+          "minority_institution"
+        ]
+      },
+      {
+        "course_id": "RIZVI_BSC_CS",
+        "degree": "B.Sc",
+        "branch": "Computer Science",
+        "duration_years": 3,
+        "seat_intake": 120,
+        "difficulty": "low",
+        "cutoffs": {
+          "OPEN_PERCENTAGE": 45,
+          "OBC_PERCENTAGE": 40,
+          "SC_PERCENTAGE": 33
+        },
+        "eligibility": {
+          "exam": "Merit / HSC Percentage",
+          "min_percentage": 45
+        },
+        "fees": {
+          "total_fees": 100000,
+          "hostel_fees": 0,
+          "other_fees": 7000
+        },
+        "placements": {
+          "registered_students": 115,
+          "participating_students": 80,
+          "students_placed": 40,
+          "placement_percentage": 47,
+          "companies_visited": 18,
+          "total_offers": 55,
+          "offers_accepted": 38,
+          "avg_package": 250000,
+          "median_package": 210000,
+          "highest_package": 1200000,
+          "top_roles": [
+            "Junior Developer",
+            "Tech Support",
+            "Data Entry Analyst"
+          ],
+          "top_companies": [
+            "TCS BPS",
+            "Wipro",
+            "Local IT Firms"
+          ]
+        },
+        "career_paths": [
+          "Software Developer",
+          "Tech Support",
+          "MCA / M.Sc (Further Studies)"
+        ],
+        "tags": [
+          "affordable",
+          "science",
+          "mumbai_city",
+          "minority_institution"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SHAH_ANCHOR_ENGG",
+    "college_name": "Shah & Anchor Kutchhi Engineering College",
+    "city": "Chembur, Mumbai",
+    "state": "Maharashtra",
+    "type": "private",
+    "overall_rating": 7.0,
+    "scores": {
+      "placement": 7.0,
+      "research": 6.2,
+      "campus": 7.0,
+      "faculty": 7.0,
+      "infrastructure": 7.2
+    },
+    "roi": {
+      "roi_score": 7.2,
+      "payback_years": 4
+    },
+    "facilities": [
+      "Library",
+      "Labs",
+      "WiFi Campus",
+      "Canteen",
+      "Sports Facilities"
+    ],
+    "courses": [
+      {
+        "course_id": "SAKEC_CS_BTECH",
+        "degree": "B.E.",
+        "branch": "Computer Engineering",
+        "duration_years": 4,
+        "seat_intake": 120,
+        "difficulty": "low",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 78,
+          "JEE_MAIN_PERCENTILE": 68,
+          "OBC": 73,
+          "SC": 58
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 45,
+          "jee_main_cutoff_percentile": 68,
+          "mht_cet_cutoff_percentile": 78
+        },
+        "fees": {
+          "total_fees": 660000,
+          "hostel_fees": 0,
+          "other_fees": 24000
+        },
+        "placements": {
+          "registered_students": 115,
+          "participating_students": 95,
+          "students_placed": 65,
+          "placement_percentage": 63,
+          "companies_visited": 50,
+          "total_offers": 95,
+          "offers_accepted": 62,
+          "avg_package": 520000,
+          "median_package": 420000,
+          "highest_package": 5000000,
+          "top_roles": [
+            "Software Engineer",
+            "Web Developer",
+            "Data Analyst"
+          ],
+          "top_companies": [
+            "TCS",
+            "Infosys",
+            "Wipro",
+            "Capgemini"
+          ]
+        },
+        "career_paths": [
+          "Software Engineer",
+          "Web Developer",
+          "Data Analyst"
+        ],
+        "tags": [
+          "chembur",
+          "mumbai_city"
+        ]
+      },
+      {
+        "course_id": "SAKEC_IT_BTECH",
+        "degree": "B.E.",
+        "branch": "Information Technology",
+        "duration_years": 4,
+        "seat_intake": 60,
+        "difficulty": "low",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 75,
+          "JEE_MAIN_PERCENTILE": 65,
+          "OBC": 70,
+          "SC": 55
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 45,
+          "jee_main_cutoff_percentile": 65,
+          "mht_cet_cutoff_percentile": 75
+        },
+        "fees": {
+          "total_fees": 640000,
+          "hostel_fees": 0,
+          "other_fees": 24000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 48,
+          "students_placed": 30,
+          "placement_percentage": 60,
+          "companies_visited": 38,
+          "total_offers": 55,
+          "offers_accepted": 28,
+          "avg_package": 480000,
+          "median_package": 390000,
+          "highest_package": 4000000,
+          "top_roles": [
+            "Software Developer",
+            "IT Analyst",
+            "Network Admin"
+          ],
+          "top_companies": [
+            "TCS",
+            "Wipro",
+            "HCL",
+            "IBM"
+          ]
+        },
+        "career_paths": [
+          "Software Engineer",
+          "IT Analyst",
+          "Network Admin"
+        ],
+        "tags": [
+          "chembur",
+          "mumbai_city"
+        ]
+      },
+      {
+        "course_id": "SAKEC_EXTC_BTECH",
+        "degree": "B.E.",
+        "branch": "Electronics & Telecommunication",
+        "duration_years": 4,
+        "seat_intake": 60,
+        "difficulty": "low",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 70,
+          "JEE_MAIN_PERCENTILE": 60,
+          "OBC": 65,
+          "SC": 50
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 45,
+          "jee_main_cutoff_percentile": 60,
+          "mht_cet_cutoff_percentile": 70
+        },
+        "fees": {
+          "total_fees": 620000,
+          "hostel_fees": 0,
+          "other_fees": 24000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 44,
+          "students_placed": 26,
+          "placement_percentage": 55,
+          "companies_visited": 28,
+          "total_offers": 40,
+          "offers_accepted": 24,
+          "avg_package": 400000,
+          "median_package": 330000,
+          "highest_package": 3000000,
+          "top_roles": [
+            "Embedded Engineer",
+            "Telecom Engineer",
+            "Software Engineer"
+          ],
+          "top_companies": [
+            "Wipro",
+            "L&T",
+            "HCL"
+          ]
+        },
+        "career_paths": [
+          "Embedded Engineer",
+          "Telecom Engineer",
+          "Software Engineer"
+        ],
+        "tags": [
+          "chembur",
+          "mumbai_city"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "MGMCET_NAVI_MUMBAI",
+    "college_name": "MGM College of Engineering & Technology",
+    "city": "Kamothe, Navi Mumbai",
+    "state": "Maharashtra",
+    "type": "private",
+    "overall_rating": 6.9,
+    "scores": {
+      "placement": 6.7,
+      "research": 6.0,
+      "campus": 7.2,
+      "faculty": 6.8,
+      "infrastructure": 7.0
+    },
+    "roi": {
+      "roi_score": 6.9,
+      "payback_years": 5
+    },
+    "facilities": [
+      "Hostel",
+      "Library",
+      "Labs",
+      "WiFi Campus",
+      "Canteen",
+      "Sports Facilities"
+    ],
+    "courses": [
+      {
+        "course_id": "MGMCET_CS_BTECH",
+        "degree": "B.E.",
+        "branch": "Computer Engineering",
+        "duration_years": 4,
+        "seat_intake": 120,
+        "difficulty": "low",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 68,
+          "JEE_MAIN_PERCENTILE": 58,
+          "OBC": 63,
+          "SC": 48
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 45,
+          "jee_main_cutoff_percentile": 58,
+          "mht_cet_cutoff_percentile": 68
+        },
+        "fees": {
+          "total_fees": 610000,
+          "hostel_fees": 85000,
+          "other_fees": 22000
+        },
+        "placements": {
+          "registered_students": 115,
+          "participating_students": 88,
+          "students_placed": 55,
+          "placement_percentage": 57,
+          "companies_visited": 40,
+          "total_offers": 78,
+          "offers_accepted": 52,
+          "avg_package": 430000,
+          "median_package": 350000,
+          "highest_package": 4000000,
+          "top_roles": [
+            "Junior Developer",
+            "Web Developer",
+            "System Analyst"
+          ],
+          "top_companies": [
+            "TCS",
+            "Infosys",
+            "Wipro",
+            "Local Startups"
+          ]
+        },
+        "career_paths": [
+          "Software Engineer",
+          "Web Developer",
+          "System Analyst"
+        ],
+        "tags": [
+          "navi_mumbai",
+          "mumbai_university"
+        ]
+      },
+      {
+        "course_id": "MGMCET_MECH_BTECH",
+        "degree": "B.E.",
+        "branch": "Mechanical Engineering",
+        "duration_years": 4,
+        "seat_intake": 60,
+        "difficulty": "low",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 55,
+          "JEE_MAIN_PERCENTILE": 45,
+          "OBC": 50,
+          "SC": 38
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 45,
+          "jee_main_cutoff_percentile": 45,
+          "mht_cet_cutoff_percentile": 55
+        },
+        "fees": {
+          "total_fees": 580000,
+          "hostel_fees": 85000,
+          "other_fees": 22000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 40,
+          "students_placed": 20,
+          "placement_percentage": 46,
+          "companies_visited": 18,
+          "total_offers": 28,
+          "offers_accepted": 18,
+          "avg_package": 290000,
+          "median_package": 250000,
+          "highest_package": 1800000,
+          "top_roles": [
+            "Production Engineer",
+            "Maintenance Engineer",
+            "Quality Analyst"
+          ],
+          "top_companies": [
+            "Bajaj",
+            "L&T",
+            "Local Manufacturing Firms"
+          ]
+        },
+        "career_paths": [
+          "Production Engineer",
+          "Quality Control",
+          "Maintenance"
+        ],
+        "tags": [
+          "core_engineering",
+          "navi_mumbai"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ATHARVA_ENGG",
+    "college_name": "Atharva College of Engineering",
+    "city": "Malad, Mumbai",
+    "state": "Maharashtra",
+    "type": "private",
+    "overall_rating": 6.9,
+    "scores": {
+      "placement": 6.7,
+      "research": 5.8,
+      "campus": 7.0,
+      "faculty": 6.8,
+      "infrastructure": 7.0
+    },
+    "roi": {
+      "roi_score": 6.8,
+      "payback_years": 5
+    },
+    "facilities": [
+      "Library",
+      "Labs",
+      "WiFi Campus",
+      "Canteen",
+      "Sports Facilities"
+    ],
+    "courses": [
+      {
+        "course_id": "ACE_CS_BTECH",
+        "degree": "B.E.",
+        "branch": "Computer Engineering",
+        "duration_years": 4,
+        "seat_intake": 120,
+        "difficulty": "low",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 72,
+          "JEE_MAIN_PERCENTILE": 62,
+          "OBC": 67,
+          "SC": 52
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 45,
+          "jee_main_cutoff_percentile": 62,
+          "mht_cet_cutoff_percentile": 72
+        },
+        "fees": {
+          "total_fees": 640000,
+          "hostel_fees": 0,
+          "other_fees": 23000
+        },
+        "placements": {
+          "registered_students": 115,
+          "participating_students": 88,
+          "students_placed": 58,
+          "placement_percentage": 60,
+          "companies_visited": 42,
+          "total_offers": 82,
+          "offers_accepted": 55,
+          "avg_package": 460000,
+          "median_package": 375000,
+          "highest_package": 4200000,
+          "top_roles": [
+            "Software Engineer",
+            "Web Developer",
+            "Data Analyst"
+          ],
+          "top_companies": [
+            "TCS",
+            "Wipro",
+            "Infosys",
+            "Capgemini"
+          ]
+        },
+        "career_paths": [
+          "Software Engineer",
+          "Web Developer",
+          "Data Analyst"
+        ],
+        "tags": [
+          "mumbai_city",
+          "malad"
+        ]
+      },
+      {
+        "course_id": "ACE_IT_BTECH",
+        "degree": "B.E.",
+        "branch": "Information Technology",
+        "duration_years": 4,
+        "seat_intake": 60,
+        "difficulty": "low",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 69,
+          "JEE_MAIN_PERCENTILE": 59,
+          "OBC": 64,
+          "SC": 49
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 45,
+          "jee_main_cutoff_percentile": 59,
+          "mht_cet_cutoff_percentile": 69
+        },
+        "fees": {
+          "total_fees": 620000,
+          "hostel_fees": 0,
+          "other_fees": 23000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 46,
+          "students_placed": 27,
+          "placement_percentage": 57,
+          "companies_visited": 30,
+          "total_offers": 45,
+          "offers_accepted": 25,
+          "avg_package": 420000,
+          "median_package": 345000,
+          "highest_package": 3500000,
+          "top_roles": [
+            "IT Analyst",
+            "Software Developer",
+            "Network Admin"
+          ],
+          "top_companies": [
+            "TCS",
+            "Wipro",
+            "HCL",
+            "Local IT Companies"
+          ]
+        },
+        "career_paths": [
+          "IT Analyst",
+          "Software Developer",
+          "Network Admin"
+        ],
+        "tags": [
+          "mumbai_city",
+          "malad"
+        ]
+      },
+      {
+        "course_id": "ACE_EXTC_BTECH",
+        "degree": "B.E.",
+        "branch": "Electronics & Telecommunication",
+        "duration_years": 4,
+        "seat_intake": 60,
+        "difficulty": "low",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 65,
+          "JEE_MAIN_PERCENTILE": 55,
+          "OBC": 60,
+          "SC": 45
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 45,
+          "jee_main_cutoff_percentile": 55,
+          "mht_cet_cutoff_percentile": 65
+        },
+        "fees": {
+          "total_fees": 600000,
+          "hostel_fees": 0,
+          "other_fees": 23000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 42,
+          "students_placed": 23,
+          "placement_percentage": 52,
+          "companies_visited": 23,
+          "total_offers": 36,
+          "offers_accepted": 21,
+          "avg_package": 370000,
+          "median_package": 305000,
+          "highest_package": 2700000,
+          "top_roles": [
+            "Embedded Engineer",
+            "Software Engineer",
+            "Telecom Engineer"
+          ],
+          "top_companies": [
+            "Wipro",
+            "HCL",
+            "L&T",
+            "Local Electronics Firms"
+          ]
+        },
+        "career_paths": [
+          "Embedded Engineer",
+          "Telecom Engineer",
+          "Software Engineer"
+        ],
+        "tags": [
+          "mumbai_city",
+          "malad"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "THAKUR_ENGG",
+    "college_name": "Thakur College of Engineering and Technology",
+    "city": "Kandivali, Mumbai",
+    "state": "Maharashtra",
+    "type": "private",
+    "overall_rating": 7.2,
+    "scores": {
+      "placement": 7.2,
+      "research": 6.3,
+      "campus": 7.5,
+      "faculty": 7.0,
+      "infrastructure": 7.3
+    },
+    "roi": {
+      "roi_score": 7.2,
+      "payback_years": 4
+    },
+    "facilities": [
+      "Library",
+      "Labs",
+      "WiFi Campus",
+      "Canteen",
+      "Sports Facilities",
+      "Auditorium"
+    ],
+    "courses": [
+      {
+        "course_id": "TCET_CS_BTECH",
+        "degree": "B.E.",
+        "branch": "Computer Engineering",
+        "duration_years": 4,
+        "seat_intake": 180,
+        "difficulty": "medium",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 82,
+          "JEE_MAIN_PERCENTILE": 72,
+          "OBC": 77,
+          "SC": 62
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 45,
+          "jee_main_cutoff_percentile": 72,
+          "mht_cet_cutoff_percentile": 82
+        },
+        "fees": {
+          "total_fees": 670000,
+          "hostel_fees": 0,
+          "other_fees": 25000
+        },
+        "placements": {
+          "registered_students": 172,
+          "participating_students": 145,
+          "students_placed": 100,
+          "placement_percentage": 66,
+          "companies_visited": 60,
+          "total_offers": 145,
+          "offers_accepted": 96,
+          "avg_package": 580000,
+          "median_package": 460000,
+          "highest_package": 5500000,
+          "top_roles": [
+            "Software Engineer",
+            "Web Developer",
+            "Data Analyst",
+            "System Analyst"
+          ],
+          "top_companies": [
+            "TCS",
+            "Infosys",
+            "Wipro",
+            "Capgemini",
+            "HCL"
+          ]
+        },
+        "career_paths": [
+          "Software Engineer",
+          "Web Developer",
+          "Data Analyst"
+        ],
+        "tags": [
+          "mumbai_city",
+          "kandivali"
+        ]
+      },
+      {
+        "course_id": "TCET_IT_BTECH",
+        "degree": "B.E.",
+        "branch": "Information Technology",
+        "duration_years": 4,
+        "seat_intake": 120,
+        "difficulty": "low",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 78,
+          "JEE_MAIN_PERCENTILE": 68,
+          "OBC": 73,
+          "SC": 58
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 45,
+          "jee_main_cutoff_percentile": 68,
+          "mht_cet_cutoff_percentile": 78
+        },
+        "fees": {
+          "total_fees": 650000,
+          "hostel_fees": 0,
+          "other_fees": 25000
+        },
+        "placements": {
+          "registered_students": 115,
+          "participating_students": 96,
+          "students_placed": 63,
+          "placement_percentage": 62,
+          "companies_visited": 48,
+          "total_offers": 98,
+          "offers_accepted": 60,
+          "avg_package": 540000,
+          "median_package": 430000,
+          "highest_package": 4500000,
+          "top_roles": [
+            "Software Developer",
+            "IT Analyst",
+            "Web Developer"
+          ],
+          "top_companies": [
+            "TCS",
+            "Wipro",
+            "Infosys",
+            "IBM"
+          ]
+        },
+        "career_paths": [
+          "Software Engineer",
+          "IT Analyst",
+          "Web Developer"
+        ],
+        "tags": [
+          "mumbai_city",
+          "kandivali"
+        ]
+      },
+      {
+        "course_id": "TCET_EXTC_BTECH",
+        "degree": "B.E.",
+        "branch": "Electronics & Telecommunication",
+        "duration_years": 4,
+        "seat_intake": 60,
+        "difficulty": "low",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 72,
+          "JEE_MAIN_PERCENTILE": 62,
+          "OBC": 67,
+          "SC": 52
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 45,
+          "jee_main_cutoff_percentile": 62,
+          "mht_cet_cutoff_percentile": 72
+        },
+        "fees": {
+          "total_fees": 630000,
+          "hostel_fees": 0,
+          "other_fees": 25000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 45,
+          "students_placed": 27,
+          "placement_percentage": 57,
+          "companies_visited": 30,
+          "total_offers": 44,
+          "offers_accepted": 25,
+          "avg_package": 430000,
+          "median_package": 355000,
+          "highest_package": 3200000,
+          "top_roles": [
+            "Embedded Engineer",
+            "Telecom Engineer",
+            "Software Engineer"
+          ],
+          "top_companies": [
+            "Wipro",
+            "HCL",
+            "L&T Tech",
+            "Samsung"
+          ]
+        },
+        "career_paths": [
+          "Embedded Engineer",
+          "Telecom Engineer",
+          "Software Engineer"
+        ],
+        "tags": [
+          "mumbai_city",
+          "kandivali"
+        ]
+      },
+      {
+        "course_id": "TCET_MECH_BTECH",
+        "degree": "B.E.",
+        "branch": "Mechanical Engineering",
+        "duration_years": 4,
+        "seat_intake": 60,
+        "difficulty": "low",
+        "cutoffs": {
+          "MHT_CET_PERCENTILE": 65,
+          "JEE_MAIN_PERCENTILE": 55,
+          "OBC": 60,
+          "SC": 45
+        },
+        "eligibility": {
+          "exam": "MHT-CET / JEE Main",
+          "min_percentage": 45,
+          "jee_main_cutoff_percentile": 55,
+          "mht_cet_cutoff_percentile": 65
+        },
+        "fees": {
+          "total_fees": 610000,
+          "hostel_fees": 0,
+          "other_fees": 25000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 44,
+          "students_placed": 24,
+          "placement_percentage": 50,
+          "companies_visited": 22,
+          "total_offers": 35,
+          "offers_accepted": 22,
+          "avg_package": 330000,
+          "median_package": 275000,
+          "highest_package": 2200000,
+          "top_roles": [
+            "Production Engineer",
+            "Quality Analyst",
+            "Design Engineer"
+          ],
+          "top_companies": [
+            "Tata Motors",
+            "L&T",
+            "Bajaj",
+            "Local Manufacturing Firms"
+          ]
+        },
+        "career_paths": [
+          "Production Engineer",
+          "Quality Control",
+          "Design Engineer"
+        ],
+        "tags": [
+          "core_engineering",
+          "mumbai_city"
+        ]
+      },
+      {
+        "course_id": "TCET_MBA",
+        "degree": "MBA",
+        "branch": "Management",
+        "duration_years": 2,
+        "seat_intake": 60,
+        "difficulty": "low",
+        "cutoffs": {
+          "OPEN_PERCENTAGE": 45,
+          "OBC_PERCENTAGE": 40,
+          "SC_PERCENTAGE": 35
+        },
+        "eligibility": {
+          "exam": "MAH-CET / CAT / CMAT",
+          "min_percentage": 45,
+          "cat_percentile": 62,
+          "mah_cet_percentile": 68
+        },
+        "fees": {
+          "total_fees": 520000,
+          "hostel_fees": 0,
+          "other_fees": 26000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 50,
+          "students_placed": 33,
+          "placement_percentage": 63,
+          "companies_visited": 28,
+          "total_offers": 48,
+          "offers_accepted": 31,
+          "avg_package": 400000,
+          "median_package": 330000,
+          "highest_package": 1600000,
+          "top_roles": [
+            "Business Analyst",
+            "Marketing Executive",
+            "HR Executive",
+            "Operations"
+          ],
+          "top_companies": [
+            "HDFC Life",
+            "Bajaj Finance",
+            "ICICI Bank",
+            "Local Companies"
+          ]
+        },
+        "career_paths": [
+          "Business Analyst",
+          "Marketing",
+          "HR",
+          "Sales",
+          "Banking"
+        ],
+        "tags": [
+          "management",
+          "mumbai_city",
+          "kandivali",
+          "affordable"
+        ]
+      },
+      {
+        "course_id": "TCET_BSC_IT",
+        "degree": "B.Sc",
+        "branch": "Information Technology",
+        "duration_years": 3,
+        "seat_intake": 60,
+        "difficulty": "low",
+        "cutoffs": {
+          "OPEN_PERCENTAGE": 45,
+          "OBC_PERCENTAGE": 40,
+          "SC_PERCENTAGE": 33
+        },
+        "eligibility": {
+          "exam": "Merit / HSC Percentage",
+          "min_percentage": 45
+        },
+        "fees": {
+          "total_fees": 100000,
+          "hostel_fees": 0,
+          "other_fees": 7000
+        },
+        "placements": {
+          "registered_students": 58,
+          "participating_students": 42,
+          "students_placed": 22,
+          "placement_percentage": 50,
+          "companies_visited": 16,
+          "total_offers": 32,
+          "offers_accepted": 20,
+          "avg_package": 260000,
+          "median_package": 220000,
+          "highest_package": 1200000,
+          "top_roles": [
+            "Junior Developer",
+            "Tech Support",
+            "Data Entry Analyst"
+          ],
+          "top_companies": [
+            "TCS BPS",
+            "Wipro",
+            "Local IT Firms"
+          ]
+        },
+        "career_paths": [
+          "Software Developer",
+          "Data Analyst",
+          "MCA / M.Sc (Further Studies)"
+        ],
+        "tags": [
+          "affordable",
+          "science",
+          "mumbai_city"
+        ]
+      },
+      {
+        "course_id": "TCET_BCOM",
+        "degree": "B.Com",
+        "branch": "Commerce",
+        "duration_years": 3,
+        "seat_intake": 120,
+        "difficulty": "low",
+        "cutoffs": {
+          "OPEN_PERCENTAGE": 50,
+          "OBC_PERCENTAGE": 45,
+          "SC_PERCENTAGE": 38
+        },
+        "eligibility": {
+          "exam": "Merit / HSC Percentage",
+          "min_percentage": 45
+        },
+        "fees": {
+          "total_fees": 130000,
+          "hostel_fees": 0,
+          "other_fees": 8500
+        },
+        "placements": {
+          "registered_students": 115,
+          "participating_students": 85,
+          "students_placed": 50,
+          "placement_percentage": 55,
+          "companies_visited": 25,
+          "total_offers": 70,
+          "offers_accepted": 47,
+          "avg_package": 300000,
+          "median_package": 255000,
+          "highest_package": 1300000,
+          "top_roles": [
+            "Accountant",
+            "Finance Analyst",
+            "Banking Executive",
+            "Tax Associate"
+          ],
+          "top_companies": [
+            "HDFC Bank",
+            "Axis Bank",
+            "ICICI Bank",
+            "Local CA Firms"
+          ]
+        },
+        "career_paths": [
+          "CA",
+          "Banking",
+          "Financial Analyst",
+          "MBA (Further Studies)"
+        ],
+        "tags": [
+          "commerce",
+          "affordable",
+          "mumbai_city"
+        ]
+      }
+    ]
+  }
+]
