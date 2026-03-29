@@ -552,6 +552,255 @@ function FeatureSigns({
   );
 }
 
+function RoadsideLandmarks({
+  progressRef,
+}: {
+  progressRef: MutableRefObject<{ value: number }>;
+}) {
+  const landmarkRefs = useRef<Array<THREE.Group | null>>([]);
+  const landmarks = useMemo(
+    () =>
+      Array.from({ length: 18 }, (_, index) => {
+        const z = -18 - index * 9;
+        const side = index % 2 === 0 ? -1 : 1;
+        const kind = index % 3 === 0 ? "spire" : index % 3 === 1 ? "tree" : "crystal";
+        return {
+          z,
+          side,
+          kind,
+          x: roadX(z) + side * (4.8 + (index % 2) * 0.8),
+          scale: 0.8 + (index % 4) * 0.12,
+        };
+      }),
+    [],
+  );
+
+  useFrame((state, delta) => {
+    const cameraZ = MathUtils.lerp(6, -168, progressRef.current.value);
+
+    landmarkRefs.current.forEach((landmark, index) => {
+      if (!landmark) {
+        return;
+      }
+
+      const data = landmarks[index];
+      const distance = Math.abs(cameraZ - data.z);
+      const visibility = MathUtils.clamp(1 - distance / 50, 0, 1);
+
+      landmark.position.x = MathUtils.lerp(landmark.position.x, data.x, 0.08 + delta);
+      landmark.position.z = data.z;
+      landmark.position.y = -1.4 + Math.sin(state.clock.elapsedTime * 0.45 + index) * 0.03;
+      landmark.scale.setScalar(MathUtils.lerp(landmark.scale.x, data.scale + visibility * 0.08, 0.08));
+
+      landmark.children.forEach((child) => {
+        if (!(child instanceof THREE.Mesh)) {
+          return;
+        }
+
+        const material = child.material as THREE.MeshStandardMaterial;
+        material.opacity = 0.14 + visibility * 0.32;
+        material.emissiveIntensity = visibility * 0.18;
+      });
+    });
+  });
+
+  return (
+    <group>
+      {landmarks.map((landmark, index) => (
+        <group
+          key={`landmark-${landmark.z}`}
+          ref={(node) => {
+            landmarkRefs.current[index] = node;
+          }}
+          position={[landmark.x, -1.4, landmark.z]}
+          scale={landmark.scale}
+        >
+          {landmark.kind === "spire" ? (
+            <>
+              <mesh position={[0, 0.9, 0]}>
+                <coneGeometry args={[0.42, 2.2, 5]} />
+                <meshStandardMaterial
+                  color="#6f8cb8"
+                  emissive="#7ea5dd"
+                  transparent
+                  opacity={0.22}
+                  roughness={1}
+                  metalness={0}
+                  flatShading
+                />
+              </mesh>
+              <mesh position={[0, -0.05, 0]}>
+                <cylinderGeometry args={[0.12, 0.18, 0.9, 6]} />
+                <meshStandardMaterial
+                  color="#30405f"
+                  transparent
+                  opacity={0.22}
+                  roughness={1}
+                  metalness={0}
+                  flatShading
+                />
+              </mesh>
+            </>
+          ) : null}
+
+          {landmark.kind === "tree" ? (
+            <>
+              <mesh position={[0, 0.1, 0]}>
+                <cylinderGeometry args={[0.09, 0.11, 0.9, 6]} />
+                <meshStandardMaterial
+                  color="#3a4258"
+                  transparent
+                  opacity={0.2}
+                  roughness={1}
+                  metalness={0}
+                  flatShading
+                />
+              </mesh>
+              <mesh position={[0, 1.02, 0]}>
+                <coneGeometry args={[0.72, 1.8, 7]} />
+                <meshStandardMaterial
+                  color="#7c6f88"
+                  emissive="#b18a7b"
+                  transparent
+                  opacity={0.18}
+                  roughness={1}
+                  metalness={0}
+                  flatShading
+                />
+              </mesh>
+            </>
+          ) : null}
+
+          {landmark.kind === "crystal" ? (
+            <>
+              <mesh position={[0, 0.72, 0]} rotation={[0.18, 0.3, 0]}>
+                <octahedronGeometry args={[0.62, 0]} />
+                <meshStandardMaterial
+                  color="#c29d7c"
+                  emissive="#ffb07f"
+                  transparent
+                  opacity={0.2}
+                  roughness={1}
+                  metalness={0}
+                  flatShading
+                />
+              </mesh>
+              <mesh position={[0, -0.08, 0]}>
+                <cylinderGeometry args={[0.16, 0.24, 0.7, 6]} />
+                <meshStandardMaterial
+                  color="#40374a"
+                  transparent
+                  opacity={0.18}
+                  roughness={1}
+                  metalness={0}
+                  flatShading
+                />
+              </mesh>
+            </>
+          ) : null}
+        </group>
+      ))}
+    </group>
+  );
+}
+
+function ProgressGateways({
+  progressRef,
+}: {
+  progressRef: MutableRefObject<{ value: number }>;
+}) {
+  const gateRefs = useRef<Array<THREE.Group | null>>([]);
+  const gates = useMemo(
+    () => [
+      { z: -34, color: "#8fc6ff" },
+      { z: -72, color: "#9db8ff" },
+      { z: -110, color: "#ffb27d" },
+      { z: -148, color: "#ffd38f" },
+    ],
+    [],
+  );
+
+  useFrame((state, delta) => {
+    const cameraZ = MathUtils.lerp(6, -168, progressRef.current.value);
+
+    gateRefs.current.forEach((gate, index) => {
+      if (!gate) {
+        return;
+      }
+
+      const data = gates[index];
+      const x = roadX(data.z);
+      const distance = Math.abs(cameraZ - data.z);
+      const visibility = MathUtils.clamp(1 - distance / 45, 0, 1);
+
+      gate.position.x = MathUtils.lerp(gate.position.x, x, 0.08 + delta);
+      gate.position.z = data.z;
+      gate.position.y = -0.55 + Math.sin(state.clock.elapsedTime * 0.35 + index) * 0.02;
+
+      gate.children.forEach((child, childIndex) => {
+        if (!(child instanceof THREE.Mesh)) {
+          return;
+        }
+
+        const material = child.material as THREE.MeshStandardMaterial;
+        material.opacity = childIndex === 0 ? 0.12 + visibility * 0.1 : 0.18 + visibility * 0.26;
+        material.emissiveIntensity = visibility * 0.6;
+      });
+    });
+  });
+
+  return (
+    <group>
+      {gates.map((gate, index) => (
+        <group
+          key={`gateway-${gate.z}`}
+          ref={(node) => {
+            gateRefs.current[index] = node;
+          }}
+          position={[roadX(gate.z), -0.55, gate.z]}
+        >
+          <mesh position={[0, 1.8, 0]}>
+            <torusGeometry args={[3.3, 0.08, 12, 48, Math.PI]} />
+            <meshStandardMaterial
+              color={gate.color}
+              emissive={gate.color}
+              transparent
+              opacity={0.2}
+              roughness={1}
+              metalness={0}
+              flatShading
+            />
+          </mesh>
+          <mesh position={[-3.25, 0.85, 0]}>
+            <cylinderGeometry args={[0.08, 0.1, 1.9, 8]} />
+            <meshStandardMaterial
+              color="#dce6f4"
+              emissive={gate.color}
+              transparent
+              opacity={0.2}
+              roughness={1}
+              metalness={0}
+              flatShading
+            />
+          </mesh>
+          <mesh position={[3.25, 0.85, 0]}>
+            <cylinderGeometry args={[0.08, 0.1, 1.9, 8]} />
+            <meshStandardMaterial
+              color="#dce6f4"
+              emissive={gate.color}
+              transparent
+              opacity={0.2}
+              roughness={1}
+              metalness={0}
+              flatShading
+            />
+          </mesh>
+        </group>
+      ))}
+    </group>
+  );
+}
+
 function HorizonRig({ progress, activeSection, reducedMotion }: HorizonRigProps) {
   const current = useRef({ value: 0 });
   const cameraTarget = useRef(new Vector3(0, -0.4, 6));
@@ -659,6 +908,8 @@ function HorizonRig({ progress, activeSection, reducedMotion }: HorizonRigProps)
       <Landscape />
       <Road />
       <RoadsideBeacons progressRef={current} />
+      <RoadsideLandmarks progressRef={current} />
+      <ProgressGateways progressRef={current} />
       <FeatureSigns progressRef={current} activeSection={activeSection} />
       <GuidanceBands progressRef={current} />
       <Sun progressRef={current} />
