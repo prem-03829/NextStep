@@ -122,10 +122,14 @@ export default function DashboardPage() {
               </p>
               <h2 className="max-w-4xl font-display text-5xl leading-[0.96] text-white md:text-6xl">
                 Explore colleges with
-                <span className="text-gradient"> more clarity, less noise.</span>
+                <span className="text-gradient">
+                  {" "}
+                  more clarity, less noise.
+                </span>
               </h2>
               <p className="max-w-xl text-base leading-7 text-slate-300 md:text-lg">
-                Search, predict, compare, and use AI guidance in one focused workspace.
+                Search, predict, compare, and use AI guidance in one focused
+                workspace.
               </p>
             </div>
 
@@ -277,7 +281,8 @@ export default function DashboardPage() {
               Turn search results into a clearer recommendation.
             </h2>
             <p className="mt-4 max-w-xl text-base leading-7 text-slate-300">
-              Use AI to connect your rank, interests, and course preference with a practical next step.
+              Use AI to connect your rank, interests, and course preference with
+              a practical next step.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link
@@ -320,7 +325,7 @@ export default function DashboardPage() {
           <p className="text-sm uppercase tracking-[0.26em] text-sky-200/80">
             College Discovery Tools
           </p>
-          <div className="mt-6 grid gap-4 md:grid-cols-2 2xl:grid-cols-4">
+          <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8">
             {collegeTools.map((tool) => {
               const Icon = tool.icon;
 
@@ -370,7 +375,8 @@ export default function DashboardPage() {
               <div className="h-full w-full rounded-full bg-gradient-to-r from-sky-300 via-cyan-200 to-orange-200" />
             </div>
             <p className="mt-4 text-sm leading-6 text-slate-400">
-              Search, predict, compare, and turn results into a practical next step.
+              Search, predict, compare, and turn results into a practical next
+              step.
             </p>
           </div>
 
@@ -384,7 +390,8 @@ export default function DashboardPage() {
                   Best Next Step
                 </p>
                 <p className="text-sm leading-6 text-slate-200">
-                  Start with Smart Search, then use AI Summary to read your shortlist.
+                  Start with Smart Search, then use AI Summary to read your
+                  shortlist.
                 </p>
               </div>
             </div>
@@ -426,7 +433,6 @@ export default function DashboardPage() {
           ))}
         </div>
       </section>
-
     </div>
   );
 }
