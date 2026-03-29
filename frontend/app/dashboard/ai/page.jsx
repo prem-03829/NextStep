@@ -4,7 +4,6 @@ import { useState } from "react";
 import { Compass, Flag, Map, Sparkles, Target } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import Roadmap3D from "@/components/Roadmap3D";
 
 import {
   generatePersonalization,
@@ -190,12 +189,27 @@ export default function AiPage() {
             {summaryData.roadmap.length ? (
               <div className="rounded-[2rem] border border-white/10 bg-black/20 p-6">
                 <p className="text-sm uppercase tracking-[0.24em] text-sky-200/80 mb-6">
-                  Interactive Career Roadmap
+                  Career Roadmap
                 </p>
-                <Roadmap3D roadmap={summaryData.roadmap} />
+                <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+                  {summaryData.roadmap.map((step, index) => (
+                    <div
+                      key={`${step}-${index}`}
+                      className="rounded-[1.5rem] border border-white/10 bg-white/5 p-4"
+                    >
+                      
+                      <p className="text-xs uppercase tracking-[0.22em] text-slate-500">
+                        Step {index + 1}
+                        
+                      </p>
+                      <p className="mt-3 text-sm leading-7 text-white">
+                        {step}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
             ) : null}
-
             {summaryData.cards.length ? (
               <div className="grid gap-4 md:grid-cols-2">
                 {summaryData.cards.map((card) => {
@@ -232,14 +246,48 @@ export default function AiPage() {
                   <ReactMarkdown
                     remarkPlugins={[remarkGfm]}
                     components={{
-                      p: ({ node, ...props }) => <p className="mb-4 last:mb-0" {...props} />,
-                      h1: ({ node, ...props }) => <h1 className="mb-4 text-xl font-semibold text-white" {...props} />,
-                      h2: ({ node, ...props }) => <h2 className="mb-3 text-lg font-semibold text-white" {...props} />,
-                      h3: ({ node, ...props }) => <h3 className="mb-2 text-base font-semibold text-white" {...props} />,
-                      ul: ({ node, ...props }) => <ul className="mb-4 ml-6 list-disc space-y-2" {...props} />,
-                      ol: ({ node, ...props }) => <ol className="mb-4 ml-6 list-decimal space-y-2" {...props} />,
-                      li: ({ node, ...props }) => <li className="pl-1" {...props} />,
-                      strong: ({ node, ...props }) => <strong className="font-semibold text-orange-200" {...props} />,
+                      p: ({ node, ...props }) => (
+                        <p className="mb-4 last:mb-0" {...props} />
+                      ),
+                      h1: ({ node, ...props }) => (
+                        <h1
+                          className="mb-4 text-xl font-semibold text-white"
+                          {...props}
+                        />
+                      ),
+                      h2: ({ node, ...props }) => (
+                        <h2
+                          className="mb-3 text-lg font-semibold text-white"
+                          {...props}
+                        />
+                      ),
+                      h3: ({ node, ...props }) => (
+                        <h3
+                          className="mb-2 text-base font-semibold text-white"
+                          {...props}
+                        />
+                      ),
+                      ul: ({ node, ...props }) => (
+                        <ul
+                          className="mb-4 ml-6 list-disc space-y-2"
+                          {...props}
+                        />
+                      ),
+                      ol: ({ node, ...props }) => (
+                        <ol
+                          className="mb-4 ml-6 list-decimal space-y-2"
+                          {...props}
+                        />
+                      ),
+                      li: ({ node, ...props }) => (
+                        <li className="pl-1" {...props} />
+                      ),
+                      strong: ({ node, ...props }) => (
+                        <strong
+                          className="font-semibold text-orange-200"
+                          {...props}
+                        />
+                      ),
                     }}
                   >
                     {summaryData.finalAdvice}
@@ -268,7 +316,8 @@ export default function AiPage() {
 
         <div className="mt-6 rounded-[1.5rem] border border-white/10 bg-black/20 p-4">
           <div className="rounded-[1.25rem] bg-white/5 px-4 py-3 text-sm leading-7 text-slate-300">
-            Ask the backend chat service about colleges, scholarships, or careers.
+            Ask the backend chat service about colleges, scholarships, or
+            careers.
           </div>
           <textarea
             rows={5}

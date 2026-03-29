@@ -5,10 +5,41 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+api_key = os.getenv("GROQ_API_KEY")
+if not api_key:
+    print("WARNING: GROQ_API_KEY not found in environment variables. AI features in groq_service will be disabled.")
+    client = None
+else:
+    client = Groq(api_key=api_key)
 
 
 def generate_ai_report(user_input, career_output, college_output):
+    if not client:
+        return """
+Reality Check:
+- Your rank limits top college options
+- Focus on skills over brand
+
+Best Option:
+- State engineering colleges
+
+ROI Insight:
+- Low fees, decent placements
+
+Strategy:
+- Start coding early
+- Build projects
+- Seek internships
+
+Final Advice:
+Skills matter more than college name
+
+Future Path Mapping:
+- Year 1-2: Learn fundamentals
+- Year 3: Projects and internships
+- Year 4: 4-8 LPA placement
+- With effort: 10+ LPA possible
+"""
 
     # Create structured JSON
     structured_data = {

@@ -5,11 +5,18 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+api_key = os.getenv("GROQ_API_KEY")
+if not api_key:
+    print("WARNING: GROQ_API_KEY not found in environment variables. AI features will be disabled.")
+    client = None
+else:
+    client = Groq(api_key=api_key)
 
 
 # 🔥 MAIN MENTOR (STRUCTURED + HYBRID AI)
 def generate_mental_guide_response(user_message, context=None):
+    if not client:
+        return "AI Mentor is currently unavailable (API key missing)."
 
     system_prompt = """
 You are a smart Indian career mentor and guide.
@@ -76,6 +83,8 @@ FORMAT:
 
 # 🔥 COLLEGE EXPLANATION (UI FRIENDLY)
 def generate_college_explanation(college):
+    if not client:
+        return f"- {college.get('college')} offers decent opportunity\n- ROI: {college.get('roi')}\n- Risk level: {college.get('risk')}"
 
     prompt = f"""
 Explain this college in SHORT bullet points (no paragraph):
