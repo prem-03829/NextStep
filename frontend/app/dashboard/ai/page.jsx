@@ -1,20 +1,117 @@
+"use client";
+
+import { useState } from "react";
+
+import {
+  generatePersonalization,
+  getApiBaseUrl,
+  sendChatMessage,
+} from "@/lib/api";
+
 export default function AiPage() {
+  const [rank, setRank] = useState(12000);
+  const [preferredCourse, setPreferredCourse] = useState("CS");
+  const [interests, setInterests] = useState("coding, problem solving");
+  const [summary, setSummary] = useState(
+    "Generate a personalized summary from the backend.",
+  );
+  const [mentorAdvice, setMentorAdvice] = useState("");
+  const [summaryLoading, setSummaryLoading] = useState(false);
+  const [message, setMessage] = useState("");
+  const [reply, setReply] = useState("");
+  const [chatLoading, setChatLoading] = useState(false);
+
+  async function handleGenerate() {
+    try {
+      setSummaryLoading(true);
+      const response = await generatePersonalization({
+        rank,
+        preferred_course: preferredCourse,
+        interests: interests
+          .split(",")
+          .map((item) => item.trim())
+          .filter(Boolean),
+      });
+
+      setSummary(response.personalized_report || response.error || "No summary returned.");
+      setMentorAdvice(response.ai_mentor_advice || "");
+    } catch (error) {
+      setSummary(`Could not reach ${getApiBaseUrl()}. Start the backend and try again.`);
+      setMentorAdvice("");
+    } finally {
+      setSummaryLoading(false);
+    }
+  }
+
+  async function handleChat() {
+    try {
+      setChatLoading(true);
+      const response = await sendChatMessage(message);
+      setReply(response.response);
+    } catch (error) {
+      setReply(`Could not reach ${getApiBaseUrl()}. Start the backend and try again.`);
+    } finally {
+      setChatLoading(false);
+    }
+  }
+
   return (
     <div className="grid gap-6 xl:grid-cols-[1.2fr_0.8fr]">
       <section className="rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-soft backdrop-blur-xl">
-        <p className="text-sm uppercase tracking-[0.26em] text-sky-200/80">
-          AI Decision Summary
-        </p>
-        <h2 className="mt-3 font-display text-4xl text-white">
-          A clear path with practical upside
-        </h2>
+        <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+          <p className="text-sm uppercase tracking-[0.26em] text-sky-200/80">
+            AI Decision Summary
+          </p>
+          <div className="rounded-full border border-white/10 bg-black/20 px-4 py-2 text-xs uppercase tracking-[0.18em] text-slate-300">
+            Source: {getApiBaseUrl()}
+          </div>
+        </div>
+
+        <div className="mt-6 grid gap-4 md:grid-cols-3">
+          <label className="space-y-2">
+            <span className="text-sm text-slate-300">Rank</span>
+            <input
+              type="number"
+              value={rank}
+              onChange={(event) => setRank(Number(event.target.value))}
+              className="w-full rounded-2xl border border-white/10 bg-[#060a17] px-4 py-3 text-sm text-white outline-none"
+            />
+          </label>
+          <label className="space-y-2">
+            <span className="text-sm text-slate-300">Preferred Course</span>
+            <input
+              value={preferredCourse}
+              onChange={(event) => setPreferredCourse(event.target.value)}
+              className="w-full rounded-2xl border border-white/10 bg-[#060a17] px-4 py-3 text-sm text-white outline-none"
+            />
+          </label>
+          <label className="space-y-2">
+            <span className="text-sm text-slate-300">Interests</span>
+            <input
+              value={interests}
+              onChange={(event) => setInterests(event.target.value)}
+              className="w-full rounded-2xl border border-white/10 bg-[#060a17] px-4 py-3 text-sm text-white outline-none"
+            />
+          </label>
+        </div>
+
+        <button
+          type="button"
+          onClick={handleGenerate}
+          className="mt-6 rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm text-white transition hover:bg-white/15"
+        >
+          {summaryLoading ? "Generating..." : "Generate Summary"}
+        </button>
+
         <p className="mt-6 max-w-3xl text-base leading-8 text-slate-300">
-          Based on your profile, the strongest direction combines creative
-          decision-making with structured execution. That is why design,
-          analytics, and growth-oriented roles surfaced first. The next step is
-          choosing an institution and funding route that keeps your momentum high
-          while closing the most important skill gaps.
+          {summary}
         </p>
+
+        {mentorAdvice ? (
+          <div className="mt-6 rounded-[1.5rem] border border-white/10 bg-black/20 p-4 text-sm leading-7 text-slate-300">
+            {mentorAdvice}
+          </div>
+        ) : null}
       </section>
 
       <section className="rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-soft backdrop-blur-xl">
@@ -24,20 +121,28 @@ export default function AiPage() {
 
         <div className="mt-6 rounded-[1.5rem] border border-white/10 bg-black/20 p-4">
           <div className="rounded-[1.25rem] bg-white/5 px-4 py-3 text-sm leading-7 text-slate-300">
-            Ask about colleges, scholarships, or whether a career path matches
-            your interests.
+            Ask the backend chat service about colleges, scholarships, or careers.
           </div>
           <textarea
             rows={5}
+            value={message}
+            onChange={(event) => setMessage(event.target.value)}
             placeholder="Type your question here..."
             className="mt-4 w-full resize-none rounded-[1.25rem] border border-white/10 bg-[#060a17] px-4 py-3 text-sm text-white outline-none placeholder:text-slate-500"
           />
           <button
             type="button"
+            onClick={handleChat}
             className="mt-4 rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm text-white transition hover:bg-white/15"
           >
-            Send
+            {chatLoading ? "Sending..." : "Send"}
           </button>
+
+          {reply ? (
+            <div className="mt-4 rounded-[1.25rem] bg-white/5 px-4 py-3 text-sm leading-7 text-slate-300">
+              {reply}
+            </div>
+          ) : null}
         </div>
       </section>
     </div>

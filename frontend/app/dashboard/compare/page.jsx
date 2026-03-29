@@ -1,67 +1,79 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
-const colleges = [
-  {
-    name: "North Star Institute",
-    fees: "$24k / year",
-    placement: "88%",
-    facilities: "Hostel, Labs, Sports",
-    minority: "No",
-    location: "Bangalore",
-  },
-  {
-    name: "Aurora State University",
-    fees: "$18k / year",
-    placement: "81%",
-    facilities: "Labs, Library, Incubator",
-    minority: "No",
-    location: "Pune",
-  },
-  {
-    name: "Meridian Career College",
-    fees: "$14k / year",
-    placement: "74%",
-    facilities: "Hostel, Library, Language Cell",
-    minority: "Yes",
-    location: "Hyderabad",
-  },
-  {
-    name: "Summit Tech Academy",
-    fees: "$20k / year",
-    placement: "83%",
-    facilities: "Labs, Hostel, Innovation Hub",
-    minority: "No",
-    location: "Bangalore",
-  },
-];
+import { fetchColleges, getApiBaseUrl } from "@/lib/api";
+import { normalizeCollege } from "@/lib/college-utils";
 
 const comparisonRows = [
-  { key: "location", label: "Location" },
-  { key: "fees", label: "Fees" },
-  { key: "placement", label: "Placement" },
-  { key: "facilities", label: "Facilities" },
-  { key: "minority", label: "Linguistic Minority" },
+  { key: "city", label: "City" },
+  { key: "featuredCourse", label: "Featured Course" },
+  { key: "feesLabel", label: "Fees" },
+  { key: "placementLabel", label: "Placement" },
+  { key: "avgPackageLabel", label: "Average Package" },
+  { key: "roiLabel", label: "ROI" },
 ];
 
 export default function ComparePage() {
-  const [leftCollege, setLeftCollege] = useState(colleges[0].name);
-  const [rightCollege, setRightCollege] = useState(colleges[1].name);
+  const [colleges, setColleges] = useState([]);
+  const [leftCollege, setLeftCollege] = useState("");
+  const [rightCollege, setRightCollege] = useState("");
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    let cancelled = false;
+
+    async function load() {
+      try {
+        setLoading(true);
+        setError("");
+        const response = await fetchColleges();
+        const normalized = response.colleges.map(normalizeCollege).slice(0, 30);
+
+        if (!cancelled) {
+          setColleges(normalized);
+          setLeftCollege(normalized[0]?.name || "");
+          setRightCollege(normalized[1]?.name || normalized[0]?.name || "");
+        }
+      } catch (fetchError) {
+        if (!cancelled) {
+          setError(
+            `Could not load colleges from ${getApiBaseUrl()}. Start the backend and try again.`,
+          );
+        }
+      } finally {
+        if (!cancelled) {
+          setLoading(false);
+        }
+      }
+    }
+
+    load();
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const selectedColleges = useMemo(() => {
     return {
       left: colleges.find((college) => college.name === leftCollege),
       right: colleges.find((college) => college.name === rightCollege),
     };
-  }, [leftCollege, rightCollege]);
+  }, [colleges, leftCollege, rightCollege]);
 
   return (
     <div className="space-y-8">
       <section className="rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-soft backdrop-blur-xl">
-        <p className="text-sm uppercase tracking-[0.26em] text-sky-200/80">
-          Select Colleges
-        </p>
+        <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+          <p className="text-sm uppercase tracking-[0.26em] text-sky-200/80">
+            Compare Colleges
+          </p>
+          <div className="rounded-full border border-white/10 bg-black/20 px-4 py-2 text-xs uppercase tracking-[0.18em] text-slate-300">
+            Source: {getApiBaseUrl()}
+          </div>
+        </div>
         <div className="mt-6 grid gap-4 md:grid-cols-2">
           <label className="space-y-2">
             <span className="text-sm text-slate-300">College 1</span>
@@ -71,7 +83,7 @@ export default function ComparePage() {
               className="w-full rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white outline-none"
             >
               {colleges.map((college) => (
-                <option key={college.name} value={college.name}>
+                <option key={college.id} value={college.name}>
                   {college.name}
                 </option>
               ))}
@@ -86,7 +98,7 @@ export default function ComparePage() {
               className="w-full rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white outline-none"
             >
               {colleges.map((college) => (
-                <option key={college.name} value={college.name}>
+                <option key={college.id} value={college.name}>
                   {college.name}
                 </option>
               ))}
@@ -95,36 +107,46 @@ export default function ComparePage() {
         </div>
       </section>
 
-      <section className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 shadow-soft backdrop-blur-xl">
-        <div className="grid grid-cols-3 border-b border-white/10 bg-black/20">
-          <div className="px-6 py-4 text-sm uppercase tracking-[0.2em] text-slate-400">
-            Criteria
-          </div>
-          <div className="px-6 py-4 font-display text-xl text-white">
-            {selectedColleges.left?.name}
-          </div>
-          <div className="px-6 py-4 font-display text-xl text-white">
-            {selectedColleges.right?.name}
-          </div>
+      {loading ? (
+        <div className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 text-sm text-slate-300">
+          Loading colleges for comparison...
         </div>
-
-        {comparisonRows.map((row) => (
-          <div
-            key={row.key}
-            className="grid grid-cols-1 border-b border-white/10 last:border-b-0 md:grid-cols-3"
-          >
-            <div className="bg-black/10 px-6 py-4 text-sm text-slate-300">
-              {row.label}
+      ) : error ? (
+        <div className="rounded-[1.75rem] border border-amber-200/20 bg-amber-200/10 p-6 text-sm text-amber-50">
+          {error}
+        </div>
+      ) : (
+        <section className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 shadow-soft backdrop-blur-xl">
+          <div className="grid grid-cols-3 border-b border-white/10 bg-black/20">
+            <div className="px-6 py-4 text-sm uppercase tracking-[0.2em] text-slate-400">
+              Criteria
             </div>
-            <div className="px-6 py-4 text-sm text-white">
-              {selectedColleges.left?.[row.key]}
+            <div className="px-6 py-4 font-display text-xl text-white">
+              {selectedColleges.left?.name}
             </div>
-            <div className="px-6 py-4 text-sm text-white">
-              {selectedColleges.right?.[row.key]}
+            <div className="px-6 py-4 font-display text-xl text-white">
+              {selectedColleges.right?.name}
             </div>
           </div>
-        ))}
-      </section>
+
+          {comparisonRows.map((row) => (
+            <div
+              key={row.key}
+              className="grid grid-cols-1 border-b border-white/10 last:border-b-0 md:grid-cols-3"
+            >
+              <div className="bg-black/10 px-6 py-4 text-sm text-slate-300">
+                {row.label}
+              </div>
+              <div className="px-6 py-4 text-sm text-white">
+                {selectedColleges.left?.[row.key]}
+              </div>
+              <div className="px-6 py-4 text-sm text-white">
+                {selectedColleges.right?.[row.key]}
+              </div>
+            </div>
+          ))}
+        </section>
+      )}
     </div>
   );
 }

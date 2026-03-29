@@ -1,7 +1,9 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Query
+
 from services.college.predictor_service import predict_colleges
 from schemas.predictor_schema import PredictorRequest, PredictorResponse, CollegePrediction
 from typing import Dict, List
+from utils.data_loader import load_all_college_data
 
 router = APIRouter(prefix="/colleges", tags=["Colleges"])
 
@@ -48,17 +50,52 @@ def predict_colleges_route(request: PredictorRequest):
         raise HTTPException(status_code=500, detail=str(e))
 
 @router.get("/")
-def get_colleges():
-    return {"colleges": []}
+def get_all_colleges(
+    city: str | None = Query(default=None),
+    degree: str | None = Query(default=None),
+    facility: str | None = Query(default=None),
+    minority_only: bool = Query(default=False),
+):
+    colleges = load_all_college_data()
+
+    filtered = []
+    normalized_city = city.lower().strip() if city else None
+    normalized_degree = degree.lower().strip() if degree else None
+    normalized_facility = facility.lower().strip() if facility else None
+
+    for college in colleges:
+        college_city = str(college.get("city", "")).lower().strip()
+        facilities = [str(item).lower().strip() for item in college.get("facilities", [])]
+        courses = college.get("courses", [])
+        degrees = [str(course.get("degree", "")).lower().strip() for course in courses]
+        minority_status = bool(college.get("linguistic_minority", False))
+
+        if normalized_city and college_city != normalized_city:
+            continue
+
+        if normalized_degree and normalized_degree not in degrees:
+            continue
+
+        if normalized_facility and normalized_facility not in facilities:
+            continue
+
+        if minority_only and not minority_status:
+            continue
+
+        filtered.append(college)
+
+    return {"total": len(filtered), "colleges": filtered}
+
 
 @router.post("/filter")
-def filter_colleges():
-    return {"filtered": []}
+def filter_colleges(request: dict):
+    return get_all_colleges(
+        city=request.get("city"),
+        degree=request.get("degree"),
+        facility=request.get("facility"),
+        minority_only=bool(request.get("minority_only", False)),
+    )
 
 @router.get("/{college_id}")
 def get_college(college_id: int):
     return {"college_id": college_id}
-
-@router.get("/")
-def get_all_colleges():
-    return load_all_college_data()
