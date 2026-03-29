@@ -236,6 +236,7 @@ a {
     linear-gradient(180deg, rgba(10, 15, 30, 0.95), rgba(6, 10, 22, 0.9));
 }
 
+
 .floating-pill {
   animation: drift 9s ease-in-out infinite;
 }

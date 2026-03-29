@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Compass, Flag, Map, Sparkles, Target } from "lucide-react";
 
 import {
   generatePersonalization,
@@ -8,39 +9,61 @@ import {
   sendChatMessage,
 } from "@/lib/api";
 
-function formatSummary(report) {
+function normalizeSummary(report) {
   if (!report) {
-    return "No summary returned.";
+    return null;
   }
 
   if (typeof report === "string") {
-    return report;
+    return {
+      headline: "AI summary",
+      intro: report,
+      roadmap: [],
+      cards: [],
+      finalAdvice: "",
+    };
   }
 
-  const sections = [
-    report.career_target ? `Career target: ${report.career_target}` : null,
-    Array.isArray(report.roadmap) && report.roadmap.length
-      ? `Roadmap: ${report.roadmap.join(" -> ")}`
-      : null,
-    report.college_decision
-      ? `College decision: ${report.college_decision}`
-      : null,
-    report.roi_strategy ? `ROI strategy: ${report.roi_strategy}` : null,
-    report.travel_strategy
-      ? `Travel strategy: ${report.travel_strategy}`
-      : null,
-    report.goal_strategy ? `Goal strategy: ${report.goal_strategy}` : null,
-    report.final_advice ? `Final advice: ${report.final_advice}` : null,
-  ].filter(Boolean);
-
-  return sections.join("\n\n") || "No summary returned.";
+  return {
+    headline: report.career_target || "Personalized guidance",
+    intro: report.college_decision || "Your summary is ready.",
+    roadmap: Array.isArray(report.roadmap) ? report.roadmap : [],
+    cards: [
+      {
+        key: "college",
+        title: "College Decision",
+        body: report.college_decision,
+        icon: Compass,
+      },
+      {
+        key: "roi",
+        title: "ROI Strategy",
+        body: report.roi_strategy,
+        icon: Target,
+      },
+      {
+        key: "travel",
+        title: "Travel Strategy",
+        body: report.travel_strategy,
+        icon: Map,
+      },
+      {
+        key: "goal",
+        title: "Goal Strategy",
+        body: report.goal_strategy,
+        icon: Flag,
+      },
+    ].filter((card) => Boolean(card.body)),
+    finalAdvice: report.final_advice || "",
+  };
 }
 
 export default function AiPage() {
   const [rank, setRank] = useState(12000);
   const [preferredCourse, setPreferredCourse] = useState("CS");
   const [interests, setInterests] = useState("coding, problem solving");
-  const [summary, setSummary] = useState(
+  const [summaryData, setSummaryData] = useState(null);
+  const [summaryError, setSummaryError] = useState(
     "Generate a personalized summary from the backend.",
   );
   const [mentorAdvice, setMentorAdvice] = useState("");
@@ -52,6 +75,7 @@ export default function AiPage() {
   async function handleGenerate() {
     try {
       setSummaryLoading(true);
+      setSummaryError("");
       const response = await generatePersonalization({
         rank,
         preferred_course: preferredCourse,
@@ -61,12 +85,18 @@ export default function AiPage() {
           .filter(Boolean),
       });
 
-      setSummary(
-        formatSummary(response.personalized_report || response.error),
-      );
+      if (response.error) {
+        setSummaryData(null);
+        setSummaryError(response.error);
+      } else {
+        setSummaryData(normalizeSummary(response.personalized_report));
+      }
       setMentorAdvice(response.ai_mentor_advice || "");
     } catch (error) {
-      setSummary(`Could not reach ${getApiBaseUrl()}. Start the backend and try again.`);
+      setSummaryData(null);
+      setSummaryError(
+        `Could not reach ${getApiBaseUrl()}. Start the backend and try again.`,
+      );
       setMentorAdvice("");
     } finally {
       setSummaryLoading(false);
@@ -133,9 +163,91 @@ export default function AiPage() {
           {summaryLoading ? "Generating..." : "Generate Summary"}
         </button>
 
-        <p className="mt-6 max-w-3xl whitespace-pre-line text-base leading-8 text-slate-300">
-          {summary}
-        </p>
+        {summaryData ? (
+          <div className="mt-6 space-y-6">
+            <div className="overflow-hidden rounded-[2rem] border border-sky-200/15 bg-[linear-gradient(135deg,rgba(91,157,255,0.16),rgba(255,255,255,0.04),rgba(255,184,117,0.14))] p-6">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.26em] text-sky-100/70">
+                    Recommended Direction
+                  </p>
+                  <h2 className="mt-3 font-display text-4xl text-white">
+                    {summaryData.headline}
+                  </h2>
+                  <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-200">
+                    {summaryData.intro}
+                  </p>
+                </div>
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-black/20 text-sky-100">
+                  <Sparkles className="h-6 w-6" />
+                </div>
+              </div>
+            </div>
+
+            {summaryData.roadmap.length ? (
+              <div className="rounded-[2rem] border border-white/10 bg-black/20 p-6">
+                <p className="text-sm uppercase tracking-[0.24em] text-sky-200/80">
+                  Roadmap
+                </p>
+                <div className="mt-5 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+                  {summaryData.roadmap.map((step, index) => (
+                    <div
+                      key={`${step}-${index}`}
+                      className="rounded-[1.5rem] border border-white/10 bg-white/5 p-4"
+                    >
+                      <p className="text-xs uppercase tracking-[0.22em] text-slate-500">
+                        Step {index + 1}
+                      </p>
+                      <p className="mt-3 text-sm leading-7 text-white">{step}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ) : null}
+
+            {summaryData.cards.length ? (
+              <div className="grid gap-4 md:grid-cols-2">
+                {summaryData.cards.map((card) => {
+                  const Icon = card.icon;
+
+                  return (
+                    <article
+                      key={card.key}
+                      className="rounded-[1.75rem] border border-white/10 bg-white/5 p-5 shadow-soft"
+                    >
+                      <div className="flex items-center gap-3">
+                        <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-sky-300/20 to-orange-200/10 text-sky-100">
+                          <Icon className="h-5 w-5" />
+                        </div>
+                        <p className="text-sm uppercase tracking-[0.22em] text-slate-400">
+                          {card.title}
+                        </p>
+                      </div>
+                      <p className="mt-4 text-sm leading-7 text-slate-200">
+                        {card.body}
+                      </p>
+                    </article>
+                  );
+                })}
+              </div>
+            ) : null}
+
+            {summaryData.finalAdvice ? (
+              <div className="rounded-[2rem] border border-orange-200/15 bg-[linear-gradient(180deg,rgba(255,186,120,0.12),rgba(255,255,255,0.03))] p-6">
+                <p className="text-sm uppercase tracking-[0.24em] text-orange-100/80">
+                  Final Advice
+                </p>
+                <p className="mt-4 text-sm leading-8 text-slate-100">
+                  {summaryData.finalAdvice}
+                </p>
+              </div>
+            ) : null}
+          </div>
+        ) : (
+          <p className="mt-6 max-w-3xl whitespace-pre-line text-base leading-8 text-slate-300">
+            {summaryError}
+          </p>
+        )}
 
         {mentorAdvice ? (
           <div className="mt-6 rounded-[1.5rem] border border-white/10 bg-black/20 p-4 text-sm leading-7 text-slate-300">
