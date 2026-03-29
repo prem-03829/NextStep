@@ -2,7 +2,6 @@ from utils.data_loader import load_college_data as load_data, load_advanced_data
 from services.ai.chatbot_service import generate_college_explanation
 
 
-# 🔥 Probability
 def calculate_admission_probability(rank, cutoff):
     if not cutoff or cutoff <= 0:
         return 0
@@ -21,24 +20,21 @@ def calculate_admission_probability(rank, cutoff):
         return 0.1
 
 
-# 🔥 Category classification
 def classify_college(probability):
     if probability >= 0.8:
         return "safe", "High chance of admission"
     elif probability >= 0.5:
         return "moderate", "Decent chance of admission"
     else:
-        return "dream", "Low chance, ambitious choice"
+        return "dream", "Low chance"
 
 
-# 🔥 ROI
 def calculate_roi(avg_package, total_fees):
     if not avg_package or not total_fees:
         return 0
     return round(avg_package / total_fees, 2)
 
 
-# 🔥 Risk
 def calculate_risk(rank, cutoff):
     if not cutoff or rank is None:
         return "medium"
@@ -53,19 +49,12 @@ def calculate_risk(rank, cutoff):
         return "high"
 
 
-# 🔥 Final score
 def calculate_final_score(prob, roi, placement):
-    return (
-        prob * 0.5 +
-        roi * 0.2 +
-        (placement / 100) * 0.3
-    )
+    return prob * 0.5 + roi * 0.2 + (placement / 100) * 0.3
 
 
-# 🚀 MAIN FUNCTION
 def predict_colleges(rank=None, percentile=None, category="OPEN", selected_course="ALL"):
 
-    # 🔥 LOAD DATA SAFELY
     basic_data = load_data() or []
     advanced_data = load_advanced_data() or []
     colleges = basic_data + advanced_data
@@ -73,18 +62,14 @@ def predict_colleges(rank=None, percentile=None, category="OPEN", selected_cours
     results = []
     selected_course = selected_course.replace(".", "").upper().strip()
 
-    # 🔥 SAVE ORIGINAL INPUT
     input_value = rank if rank is not None else percentile
 
-    # 🔥 ESTIMATE RANK FROM PERCENTILE
     if percentile is not None and rank is None:
-        # Rough estimate: percentile 100 = rank 1, percentile 0 = rank 100000
         rank = (100 - percentile) * 1000
-        rank = max(1, int(rank))  # ensure positive
+        rank = max(1, int(rank))
 
     for college in colleges:
 
-        # 🔥 SAFETY (THIS FIXES YOUR ERROR)
         if not isinstance(college, dict):
             continue
 
@@ -109,13 +94,11 @@ def predict_colleges(rank=None, percentile=None, category="OPEN", selected_cours
             rank_cutoff = None
             percentile_cutoff = None
 
-            # 🔵 Rank logic
             if rank is not None:
                 rank_cutoff = cutoffs.get(category) or cutoffs.get("OPEN")
                 if rank_cutoff:
                     prob_rank = calculate_admission_probability(rank, rank_cutoff)
 
-            # 🔵 Percentile logic
             percentile_cutoff = (
                 cutoffs.get("MHT_CET_PERCENTILE") or
                 cutoffs.get("JEE_MAIN_PERCENTILE")
@@ -135,7 +118,6 @@ def predict_colleges(rank=None, percentile=None, category="OPEN", selected_cours
                 else:
                     prob_percentile = 0.1
 
-            # 🔥 FINAL DECISION
             if prob_rank is None and prob_percentile is None:
                 continue
 
@@ -143,7 +125,6 @@ def predict_colleges(rank=None, percentile=None, category="OPEN", selected_cours
                 p for p in [prob_rank, prob_percentile] if p is not None
             )
 
-            # 🔥 SAFE cutoff
             if prob_rank is not None and rank_cutoff is not None:
                 closing_value = rank_cutoff
             elif prob_percentile is not None:
@@ -151,23 +132,26 @@ def predict_colleges(rank=None, percentile=None, category="OPEN", selected_cours
             else:
                 continue
 
+            # 🚨 HARD FILTER
+            if prob_rank is not None and rank_cutoff is not None:
+                if rank > rank_cutoff * 2:
+                    continue
+
+            if probability < 0.2:
+                continue
+
             category_label, reason = classify_college(probability)
 
             placements = course.get("placements") or {}
             avg_package = placements.get("avg_package", 0)
             placement = placements.get("placement_percentage", 0)
-            top_companies = placements.get("top_companies", [])
 
             fees = course.get("fees") or {}
             total_fees = fees.get("total_fees", 0)
 
             roi = calculate_roi(avg_package, total_fees)
             final_score = calculate_final_score(probability, roi, placement)
-
             risk = calculate_risk(rank, closing_value)
-
-            if probability < 0.2:
-                continue
 
             results.append({
                 "college": college.get("college_name"),
@@ -177,11 +161,11 @@ def predict_colleges(rank=None, percentile=None, category="OPEN", selected_cours
 
                 "category": category_label,
                 "confidence": round(probability, 2),
-                "reason": reason,
+                "reason": reason,                     # ✅ FIX
                 "final_score": round(final_score, 2),
 
                 "cutoff": closing_value,
-                "your_input": input_value,
+                "your_input": input_value,           # ✅ FIX
 
                 "avg_package": avg_package,
                 "fees": total_fees,
@@ -189,23 +173,19 @@ def predict_colleges(rank=None, percentile=None, category="OPEN", selected_cours
                 "risk": risk,
 
                 "placement_percentage": placement,
-                "top_companies": top_companies,
+                "top_companies": placements.get("top_companies", []),  # ✅ FIX
 
                 "explanation": None
             })
 
-    # 🔥 SORT + SAFE RETURN
     results.sort(key=lambda x: x["final_score"], reverse=True)
     results = results[:20]
 
-    # 🔥 AI (SAFE)
     for i, r in enumerate(results):
         if i < 5:
             try:
-                response = generate_college_explanation(r)
-                r["explanation"] = response if response else "AI explanation unavailable"
-            except Exception as e:
-                print("AI ERROR:", str(e))
-                r["explanation"] = "AI explanation unavailable"
+                r["explanation"] = generate_college_explanation(r)
+            except:
+                r["explanation"] = "AI unavailable"
 
-    return results if results else []   # 🔥 FINAL FIX
+    return results if results else []

@@ -1,45 +1,97 @@
 from groq import Groq
 import os
+import json
 from dotenv import load_dotenv
 
 load_dotenv()
 
-client = Groq(api_key=os.getenv("GROK_API_KEY"))
+client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 
-def generate_ai_report(user_input, career, colleges):
+def generate_ai_report(user_input, career_output, college_output):
+
+    # Create structured JSON
+    structured_data = {
+        "user": user_input,
+        "career": career_output,
+        "colleges": college_output
+    }
 
     prompt = f"""
-You are a strict and honest career mentor.
+You are a senior mentor: strict, practical, ROI-focused. No fluff.
 
-User:
-Rank: {user_input.get("rank")}
-Income: {user_input.get("family_income")}
-Goal: {user_input.get("goal")}
-Preferred Course: {user_input.get("preferred_course")}
+Use this data: {json.dumps(structured_data)}
 
-Career: {career}
+If college data exists, use it. If missing, use general knowledge.
 
-Colleges:
-Safe: {colleges.get("safe")}
-Moderate: {colleges.get("moderate")}
-Dream: {colleges.get("dream")}
+Output in EXACT format:
 
-Give:
-- brutally honest advice
-- ROI thinking
-- whether college choice is good or bad
-- step-by-step roadmap
+Reality Check:
+- 2 short bullet points about user rank/situation
 
-Talk like an elder brother, not like AI.
+Best Option:
+- 1-2 actual colleges or fallback suggestion
+
+ROI Insight:
+- 1-2 points about fees vs placement
+
+Strategy:
+- 2-3 actionable steps
+
+Final Advice:
+- 1 strong concluding line
+
+Future Path Mapping:
+- Year 1-2: Learn basics
+- Year 3: Build projects
+- Year 4: Placement range
+- With effort: higher potential
+
+Keep short, reference user input, use data.
 """
 
-    response = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",   # ✅ comma added
-        messages=[
-            {"role": "user", "content": prompt}
-        ],
-        temperature=0.7
-    )
+    # 🔥 WORKING MODELS
+    models = [
+        "llama-3.1-8b-instant",
+        "qwen/qwen3-32b",
+        "moonshotai/kimi-k2-instruct"
+    ]
 
-    return response.choices[0].message.content
+    for model in models:
+        try:
+            response = client.chat.completions.create(
+                model=model,
+                messages=[{"role": "user", "content": prompt}],
+                temperature=0.6
+            )
+            return response.choices[0].message.content
+        except Exception as e:
+            print("MODEL FAILED:", model, str(e))
+            continue
+
+    # Fallback structured message
+    return """
+Reality Check:
+- Your rank limits top college options
+- Focus on skills over brand
+
+Best Option:
+- State engineering colleges
+
+ROI Insight:
+- Low fees, decent placements
+
+Strategy:
+- Start coding early
+- Build projects
+- Seek internships
+
+Final Advice:
+Skills matter more than college name
+
+Future Path Mapping:
+- Year 1-2: Learn fundamentals
+- Year 3: Projects and internships
+- Year 4: 4-8 LPA placement
+- With effort: 10+ LPA possible
+"""

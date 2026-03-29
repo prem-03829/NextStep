@@ -60,7 +60,7 @@ def generate_personalized(user_input: dict):
         try:
             ai_advice = generate_ai_report(
                 user_input,
-                "Software Engineer",
+                career_output,
                 college_output
             )
         except Exception as ai_error:
